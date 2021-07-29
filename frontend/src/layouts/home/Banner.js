@@ -22,7 +22,7 @@ const useStyles = makeStyles(() =>
       display: 'flex',
       flexDirection: 'column',
       width: '45%',
-      paddingTop: 120,
+      paddingTop: 90,
       paddingLeft: 80,
       textAlign: 'left',
       marginTop: 70,

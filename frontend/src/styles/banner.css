@@ -1,0 +1,5 @@
+.btnhire:hover{
+  background-color: #ee4fe1 !important;
+  -webkit-transition: ease 0.8s;
+  transition: ease 0.8s;
+}

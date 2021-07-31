@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import HomeBannerSVG from '../../assets/svg/home-banner.svg'
+import '../../styles/banner.css'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -22,7 +23,7 @@ const useStyles = makeStyles(() =>
       display: 'flex',
       flexDirection: 'column',
       width: '45%',
-      paddingTop: 90,
+      paddingTop: 80,
       paddingLeft: 80,
       textAlign: 'left',
       marginTop: 70,
@@ -38,7 +39,7 @@ const useStyles = makeStyles(() =>
     subtitle: {
       fontSize: 18,
       color: '#FFF',
-      width: '85%',
+      width: '79%',
       paddingLeft: 10,
       marginTop: 30,
     },
@@ -49,7 +50,7 @@ const useStyles = makeStyles(() =>
       marginRight: 60,
     },
     btnshire: {
-      width: 250,
+      width: 240,
       marginTop: 60,
       paddingLeft: 10,
       borderRadius: 0,
@@ -86,19 +87,19 @@ const useStyles = makeStyles(() =>
       opacity: '10%',
       borderRadius: '100%',
       position: 'absolute',
-      marginTop: -90,
+      marginTop: -100,
       marginLeft: 40,
       zIndex: 2,
     },
     circularbg3: {
-      width: 40,
-      height: 40,
+      width: 35,
+      height: 35,
       backgroundColor: '#6C63FF',
       display: 'inline-block',
       opacity: '10%',
       borderRadius: '100%',
       position: 'absolute',
-      marginTop: -100,
+      marginTop: -105,
       marginLeft: 90,
       zIndex: 3,
     },
@@ -129,9 +130,9 @@ function Banner() {
               kinds of business.
             </Typography>
             <Button
-              variant="contained"
+              variant="text"
               disableElevation
-              className={classes.btnshire}
+              className={`${classes.btnshire} btnhire`}
             >
               HIRE US
             </Button>

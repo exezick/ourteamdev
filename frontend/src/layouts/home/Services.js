@@ -150,6 +150,24 @@ const useStyles = makeStyles(() =>
       marginLeft: 100,
       zIndex: 2,
     },
+    skewBG: {
+      transform: 'skew(-30deg)',
+      background:
+        'linear-gradient(to bottom,rgba(28, 3, 43, 0.8) 0,rgba(28, 3, 43, 1) 100%) #2c0346',
+      width: '850px',
+      height: '94vh',
+      marginLeft: '910px',
+      marginTop: '-510px',
+      position: 'absolute',
+      overflow: 'hidden',
+    },
+    skewIMG: {
+      width: 'auto',
+      height: '100%',
+      transform: 'skew(30deg)',
+      marginLeft: '-300px',
+      opacity: '30%',
+    },
   }),
 )
 
@@ -253,6 +271,14 @@ function Services() {
           </div>
         </Grid>
       </Grid>
+
+      <div className={classes.skewBG}>
+        <img
+          src="https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?cs=srgb&dl=pexels-tranmautritam-251225.jpg&fm=jpg"
+          className={classes.skewIMG}
+          alt="skewIMG"
+        />
+      </div>
 
       <div className={classes.circularbg}></div>
       <div className={classes.circularbg2}></div>

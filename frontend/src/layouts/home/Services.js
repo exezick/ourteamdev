@@ -13,7 +13,7 @@ import ServicesWebDevSVG from '../../assets/svg/services-webdev.svg'
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      paddingTop: '10px',
+      paddingTop: '20px',
       height: '92vh',
       overflowY: 'hidden',
       background: '#f9f2fd',
@@ -155,9 +155,9 @@ const useStyles = makeStyles(() =>
       background:
         'linear-gradient(to bottom,rgba(28, 3, 43, 0.8) 0,rgba(28, 3, 43, 1) 100%) #2c0346',
       width: '850px',
-      height: '94vh',
+      height: '95vh',
       marginLeft: '910px',
-      marginTop: '-510px',
+      marginTop: '-520px',
       position: 'absolute',
       overflow: 'hidden',
     },

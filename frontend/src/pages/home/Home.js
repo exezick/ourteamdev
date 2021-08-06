@@ -1,4 +1,5 @@
 import Banner from '../../layouts/home/Banner'
+import Howwework from '../../layouts/home/Howwework'
 import Ourteam from '../../layouts/home/Ourteam'
 import Services from '../../layouts/home/Services'
 
@@ -8,6 +9,7 @@ function Home() {
       <Banner />
       <Services />
       <Ourteam />
+      <Howwework />
     </div>
   )
 }

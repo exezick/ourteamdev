@@ -185,7 +185,13 @@ function Ourteam() {
 
         <Grid container spacing={0} className={classes.avatarWrap}>
           {ourteamList.map((avatar) => (
-            <Grid item xs={6} sm={3} className={classes.avatarGrid}>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              className={classes.avatarGrid}
+              key={avatar.id}
+            >
               <div className={classes.avatarCircMain}>
                 <img
                   src={avatar.avatarIMG}
@@ -212,6 +218,7 @@ function Ourteam() {
                   style={{ background: `${avatar.avatarColor}` }}
                 ></div>
               </div>
+
               <div className={classes.avatarText}>
                 <div className={classes.avatarName}>{avatar.avatarName}</div>
                 <div className={classes.avatarPosition}>

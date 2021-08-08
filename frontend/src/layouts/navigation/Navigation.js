@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom'
+import LogoSVG from '../../assets/logo.svg'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) =>
     links: {
       textDecoration: 'none',
       color: '#F8BDF0',
-      marginLeft: theme.spacing(3),
+      marginLeft: theme.spacing(2),
     },
     btnlink: {
       color: '#F8BDF0',
@@ -38,6 +39,13 @@ const useStyles = makeStyles((theme) =>
     appBarBg: {
       background: '#3C065E',
       color: 'white',
+      maxHeight: '65px',
+      paddingRight: theme.spacing(3),
+    },
+    LogoSVG: {
+      height: 87,
+      margin: 5,
+      marginTop: 10,
     },
   }),
 )
@@ -65,7 +73,9 @@ function Navigation(props) {
         <AppBar position="fixed" className={classes.appBarBg} elevation={0}>
           <Toolbar>
             <Typography variant="h6" align="left" className={classes.title}>
-              OurTeamDev
+              <Link to="/" className={classes.links}>
+                <img src={LogoSVG} className={classes.LogoSVG} alt={LogoSVG} />
+              </Link>
             </Typography>
             <Link to="/" className={classes.links}>
               <Button className={`${classes.btnlink} ${classes.noradius}`}>

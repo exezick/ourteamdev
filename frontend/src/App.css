@@ -1,3 +1,16 @@
 body{
   overflow-x: hidden;
 }
+
+.buttonsend:hover{
+  background-color: #ee4fe1 !important;
+  -webkit-transition: ease 0.8s;
+  transition: ease 0.8s;
+}
+
+.cotactInput {
+  border: 1px solid rgba(255,255,255,0.6) !important;
+}
+.cotactInput:hover{
+  border: 1px solid rgba(255,255,255,1) !important;
+}

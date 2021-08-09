@@ -60,7 +60,6 @@ function Cotactusform() {
               required
               fullWidth
               variant="outlined"
-              borderRadius={0}
               className="cotactInput"
               InputProps={{
                 className: classes.textfieldFont,

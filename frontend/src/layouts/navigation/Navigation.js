@@ -4,7 +4,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import LogoSVG from '../../assets/logo.svg'
 import useStyles from '../../styles/Navigation.style'
 import NavigationData from '../../data/Navigation'
@@ -25,6 +25,7 @@ function ElevationScroll(props) {
 
 function Navigation(props) {
   const classes = useStyles()
+  const location = useLocation()
 
   return (
     <div className={classes.root}>
@@ -39,9 +40,17 @@ function Navigation(props) {
 
             {NavigationData.map((menu) => (
               <Link to={menu.linkto} className={classes.links} key={menu.id}>
-                <Button className={`${classes.btnlink} ${classes.noradius}`}>
-                  {menu.name}
-                </Button>
+                {location.pathname === menu.linkto ? (
+                  <Button
+                    className={`${classes.btnlink} ${classes.noradius} menuactive`}
+                  >
+                    {menu.name}
+                  </Button>
+                ) : (
+                  <Button className={`${classes.btnlink} ${classes.noradius}`}>
+                    {menu.name}
+                  </Button>
+                )}
               </Link>
             ))}
           </Toolbar>

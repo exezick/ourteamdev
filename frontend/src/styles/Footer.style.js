@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) =>
     },
     copyright: {
       color: 'rgba(255,255,255,0.7)',
+      fontSize: '14px',
     },
     links: {
       color: 'rgba(255,255,255,0.7)',
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) =>
       paddingBottom: 20,
     },
     icon: {
-      fontSize: 30,
+      fontSize: 27,
     },
     socialLink: {
       color: '#fff',

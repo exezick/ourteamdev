@@ -42,7 +42,7 @@ function ContactInfo() {
       <List>
         <ListItem className={classes.centered}>
           <ListItemAvatar>
-            <Avatar className={classes.avatar} boxShadow={2}>
+            <Avatar className={classes.avatar}>
               <EmailIcon className={classes.iconSize} />
             </Avatar>
           </ListItemAvatar>
@@ -63,7 +63,7 @@ function ContactInfo() {
 
         <ListItem className={classes.centered}>
           <ListItemAvatar>
-            <Avatar className={classes.avatar} boxShadow={2}>
+            <Avatar className={classes.avatar}>
               <PhoneIcon className={classes.iconSize} />
             </Avatar>
           </ListItemAvatar>
@@ -84,7 +84,7 @@ function ContactInfo() {
 
         <ListItem className={classes.centered}>
           <ListItemAvatar>
-            <Avatar className={classes.avatar} boxShadow={2}>
+            <Avatar className={classes.avatar}>
               <LocationOnIcon className={classes.iconSize} />
             </Avatar>
           </ListItemAvatar>

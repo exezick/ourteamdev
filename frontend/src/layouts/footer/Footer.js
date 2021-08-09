@@ -12,28 +12,32 @@ function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="lg" alignItems="center">
+      <Container maxWidth="lg">
         <Typography variant="h6" align="left" gutterBottom>
           <Link to="/">
             <img src={LogoSVG} className={classes.LogoSVG} alt={LogoSVG} />
           </Link>
         </Typography>
         <Typography variant="subtitle1" align="left">
-          <p className={classes.description}>
-            {'We build and desgin websites and mobile apps.'}
-          </p>
+          <div className={classes.description}>
+            We build and desgin websites and mobile apps.
+          </div>
         </Typography>
 
-        <Typography align="center" className={classes.social}>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          className={classes.social}
+        >
           {socialButtonColors.map((social) => (
             <a
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
               className={classes.socialLink}
+              key={social.id}
             >
               <Box
-                key={social.id}
                 display="inline-block"
                 marginRight="1.5rem"
                 marginLeft="1.5rem"
@@ -49,8 +53,7 @@ function Footer() {
         </Typography>
 
         <Typography
-          variant="body2"
-          color="textSecondary"
+          variant="subtitle1"
           align="center"
           className={classes.copyright}
         >

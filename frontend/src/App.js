@@ -9,6 +9,7 @@ import {
 import Navigation from './layouts/navigation/Navigation'
 import Home from './pages/home/Home'
 import NotFound404 from './pages/notfound404/notfound404'
+import Footer from './layouts/footer/Footer'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Redirect to="/404" />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   )

@@ -91,7 +91,7 @@ function ContactInfo() {
           <ListItemText
             primary={
               <Typography style={{ color: 'white', fontSize: 22 }}>
-                Legazpi, City
+                Legazpi, Albay
               </Typography>
             }
             secondary={

@@ -2,7 +2,7 @@ const NavigationData = [
   {
     id: 1,
     linkto: '/',
-    name: 'Home',
+    name: 'HOME',
   },
   {
     id: 2,

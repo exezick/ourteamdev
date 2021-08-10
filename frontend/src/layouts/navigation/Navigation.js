@@ -8,6 +8,12 @@ import { Link, useLocation } from 'react-router-dom'
 import LogoSVG from '../../assets/logo.svg'
 import useStyles from '../../styles/Navigation.style'
 import NavigationData from '../../data/Navigation'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
 
 function ElevationScroll(props) {
   const { children, window } = props
@@ -27,6 +33,47 @@ function Navigation(props) {
   const classes = useStyles()
   const location = useLocation()
 
+  const anchor = 'right'
+
+  const [state, setState] = React.useState({
+    right: false,
+  })
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    setState({ ...state, [anchor]: open })
+  }
+
+  const list = (anchor) => (
+    <div
+      className={classes.drawer}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {NavigationData.map((menu) => (
+          <Link to={menu.linkto} className={classes.links} key={menu.id}>
+            {location.pathname === menu.linkto ? (
+              <ListItem button className={`menuactive menudrawer`}>
+                <ListItemText
+                  primary={menu.name}
+                  className={classes.drawerMenuText}
+                />
+              </ListItem>
+            ) : (
+              <ListItem button className={`menudrawer`}>
+                <ListItemText
+                  primary={menu.name}
+                  className={classes.drawerMenuText}
+                />
+              </ListItem>
+            )}
+          </Link>
+        ))}
+      </List>
+    </div>
+  )
+
   return (
     <div className={classes.root}>
       <ElevationScroll {...props}>
@@ -38,24 +85,50 @@ function Navigation(props) {
               </Link>
             </Typography>
 
-            {NavigationData.map((menu) => (
-              <Link to={menu.linkto} className={classes.links} key={menu.id}>
-                {location.pathname === menu.linkto ? (
-                  <Button
-                    className={`${classes.btnlink} ${classes.noradius} menuactive`}
-                  >
-                    {menu.name}
-                  </Button>
-                ) : (
-                  <Button className={`${classes.btnlink} ${classes.noradius}`}>
-                    {menu.name}
-                  </Button>
-                )}
-              </Link>
-            ))}
+            <div className={classes.NavWrap}>
+              {NavigationData.map((menu) => (
+                <Link to={menu.linkto} className={classes.links} key={menu.id}>
+                  {location.pathname === menu.linkto ? (
+                    <Button
+                      className={`${classes.btnlink} ${classes.noradius} menuactive`}
+                    >
+                      {menu.name}
+                    </Button>
+                  ) : (
+                    <Button
+                      className={`${classes.btnlink} ${classes.noradius}`}
+                    >
+                      {menu.name}
+                    </Button>
+                  )}
+                </Link>
+              ))}
+            </div>
+
+            <IconButton
+              edge="start"
+              className={classes.NavMenuBurger}
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(anchor, true)}
+            >
+              <MenuIcon />
+            </IconButton>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
+
+      <React.Fragment key={1}>
+        <Button onClick={toggleDrawer('right', true)}>{anchor}</Button>
+        <SwipeableDrawer
+          anchor={anchor}
+          open={state[anchor]}
+          onClose={toggleDrawer(anchor, false)}
+          onOpen={toggleDrawer(anchor, true)}
+        >
+          {list(anchor)}
+        </SwipeableDrawer>
+      </React.Fragment>
     </div>
   )
 }

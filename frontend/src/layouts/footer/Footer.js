@@ -20,7 +20,7 @@ function Footer() {
         </Typography>
         <Typography variant="subtitle1" align="left">
           <div className={classes.description}>
-            We build and desgin websites and mobile apps.
+            We build and design websites and mobile apps.
           </div>
         </Typography>
 

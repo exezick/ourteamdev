@@ -1,6 +1,6 @@
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       display: 'flex',
@@ -21,14 +21,29 @@ const useStyles = makeStyles(() =>
       paddingLeft: 80,
       textAlign: 'left',
       marginTop: 70,
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+        position: 'relative',
+        zIndex: 5,
+        marginTop: 10,
+        paddingTop: 40,
+        paddingLeft: 40,
+        textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+      },
     },
     title: {
       fontSize: 41,
       fontWeight: 'bold',
       color: '#FFF',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 27,
+      },
     },
     textTitle: {
       marginTop: 15,
+      [theme.breakpoints.down('sm')]: {
+        marginTop: 10,
+      },
     },
     subtitle: {
       fontSize: 18,
@@ -36,12 +51,26 @@ const useStyles = makeStyles(() =>
       width: '79%',
       paddingLeft: 10,
       marginTop: 30,
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 16,
+        marginTop: 20,
+      },
     },
     svgbanner: {
       width: '43%',
       float: 'right',
       marginTop: -430,
       marginRight: 60,
+      [theme.breakpoints.down('sm')]: {
+        float: 'none',
+        width: '88%',
+        position: 'relative',
+        zIndex: 2,
+        top: -20,
+        marginRight: 20,
+        marginLeft: 25,
+        opacity: 0.3,
+      },
     },
     btnshire: {
       width: 240,
@@ -55,6 +84,11 @@ const useStyles = makeStyles(() =>
       background: '#B918AB',
       border: 0,
       color: 'white',
+      [theme.breakpoints.down('sm')]: {
+        width: 190,
+        marginTop: 30,
+        fontSize: 17,
+      },
     },
     zindex: {
       zIndex: 20,

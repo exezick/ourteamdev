@@ -53,21 +53,19 @@ function Navigation(props) {
       <List>
         {NavigationData.map((menu) => (
           <Link to={menu.linkto} className={classes.links} key={menu.id}>
-            {location.pathname === menu.linkto ? (
-              <ListItem button className={`menuactive menudrawer`}>
-                <ListItemText
-                  primary={menu.name}
-                  className={classes.drawerMenuText}
-                />
-              </ListItem>
-            ) : (
-              <ListItem button className={`menudrawer`}>
-                <ListItemText
-                  primary={menu.name}
-                  className={classes.drawerMenuText}
-                />
-              </ListItem>
-            )}
+            <ListItem
+              button
+              className={`${
+                location.pathname === menu.linkto
+                  ? 'menuactive menudrawer'
+                  : 'menudrawer '
+              }`}
+            >
+              <ListItemText
+                primary={menu.name}
+                className={classes.drawerMenuText}
+              />
+            </ListItem>
           </Link>
         ))}
       </List>
@@ -88,19 +86,13 @@ function Navigation(props) {
             <div className={classes.NavWrap}>
               {NavigationData.map((menu) => (
                 <Link to={menu.linkto} className={classes.links} key={menu.id}>
-                  {location.pathname === menu.linkto ? (
-                    <Button
-                      className={`${classes.btnlink} ${classes.noradius} menuactive`}
-                    >
-                      {menu.name}
-                    </Button>
-                  ) : (
-                    <Button
-                      className={`${classes.btnlink} ${classes.noradius}`}
-                    >
-                      {menu.name}
-                    </Button>
-                  )}
+                  <Button
+                    className={`${classes.btnlink} ${classes.noradius} ${
+                      location.pathname === menu.linkto ? 'menuactive' : ' '
+                    }`}
+                  >
+                    {menu.name}
+                  </Button>
                 </Link>
               ))}
             </div>

@@ -1,9 +1,12 @@
 import React from 'react'
+import Servicesbanner from '../../layouts/services/Servicesbanner'
+import Serviceslist from '../../layouts/services/Serviceslist'
 
 function Services() {
   return (
     <div>
-      <h1>Services</h1>
+      <Servicesbanner />
+      <Serviceslist />
     </div>
   )
 }

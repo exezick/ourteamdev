@@ -6,6 +6,7 @@ const useStyles = makeStyles(() =>
       paddingTop: '20px',
       height: '92vh',
       overflowY: 'hidden',
+      overflowX: 'hidden',
       background: '#f9f2fd',
     },
     titlemain: {
@@ -105,10 +106,10 @@ const useStyles = makeStyles(() =>
       color: '#f50057bf',
     },
     servicesSVG: {
-      width: 130,
+      width: 150,
       transform: 'skew(30deg, 0deg)',
       color: '#FFF',
-      marginTop: '60px',
+      marginTop: '70px',
     },
     zindex: {
       zIndex: 20,

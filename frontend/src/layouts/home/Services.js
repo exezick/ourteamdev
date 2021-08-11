@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import Radio from '@material-ui/core/Radio'
-import ServicesWebDevSVG from '../../assets/svg/services-webdev.svg'
+import ServicesWebDevSVG from '../../assets/svg/services/webdev.svg'
 import useStyles from '../../styles/home/Services.style'
 
 function Services() {

@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) =>
       paddingTop: 20,
       paddingBottom: 110,
       color: '#f7bcf4',
+      [theme.breakpoints.down('sm')]: {
+        paddingTop: 1,
+      },
     },
     details: {
       display: 'flex',
@@ -18,6 +21,12 @@ const useStyles = makeStyles((theme) =>
       paddingLeft: 20,
       textAlign: 'left',
       marginTop: 0,
+      [theme.breakpoints.down('sm')]: {
+        paddingTop: 0,
+        width: 'auto',
+        paddingLeft: 30,
+        paddingRight: 30,
+      },
     },
     SVGwrap: {
       marginTop: '100px',
@@ -25,18 +34,40 @@ const useStyles = makeStyles((theme) =>
       position: 'inherit',
       paddingLeft: 100,
       paddingRight: 80,
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: 0,
+        paddingRight: 0,
+        marginTop: '60px',
+      },
     },
     LeftGrid: {
+      height: 'auto',
+    },
+    rightGrid: {
       height: 'auto',
     },
     svgbanner: {
       width: '70%',
       marginLeft: 30,
+      [theme.breakpoints.down('sm')]: {
+        height: '200px',
+        marginBottom: 40,
+        marginLeft: 0,
+      },
+      [theme.breakpoints.only('md')]: {
+        width: '90%',
+        marginLeft: 0,
+        marginTop: 40,
+      },
     },
     title: {
       fontSize: 25,
       color: '#f6beef',
       fontWeight: 'bold',
+      [theme.breakpoints.down('sm')]: {
+        textAlign: 'center',
+        width: 'auto',
+      },
     },
     subtitle: {
       fontSize: 16,
@@ -44,6 +75,10 @@ const useStyles = makeStyles((theme) =>
       width: '80%',
       marginTop: 30,
       textAlign: 'left',
+      [theme.breakpoints.down('sm')]: {
+        width: 'auto',
+        textAlign: 'left',
+      },
     },
     btnshire: {
       width: 150,
@@ -57,6 +92,9 @@ const useStyles = makeStyles((theme) =>
       background: '#B918AB',
       border: 0,
       color: 'white',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 14,
+      },
     },
   }),
 )

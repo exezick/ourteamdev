@@ -4,8 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import ServicesData from '../../data/Services.list'
+import isWidthUp from '@material-ui/core/withWidth'
 
-function Serviceslist() {
+function Serviceslist(props) {
   const classes = useStyles()
 
   return (
@@ -16,9 +17,22 @@ function Serviceslist() {
           container
           spacing={0}
           className={classes.SVGwrap}
-          direction={service.id % 2 ? 'row-reverse' : ''}
+          direction={
+            isWidthUp('sm', props.width)
+              ? service.id % 2
+                ? 'row-reverse'
+                : 'row'
+              : 'column'
+          }
         >
-          <Grid item xs={6} className={`${classes.LeftGrid}`} order={2}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            className={`${classes.LeftGrid}`}
+            order={2}
+            align="center"
+          >
             <img
               src={service.servicesIMG}
               className={`${classes.svgbanner}`}
@@ -26,7 +40,7 @@ function Serviceslist() {
             />
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6} className={classes.rightGrid}>
             <div className={classes.details}>
               <Typography variant="h3" gutterBottom className={classes.title}>
                 {service.serviceName}

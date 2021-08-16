@@ -9,9 +9,43 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Radio from '@material-ui/core/Radio'
 import ServicesWebDevSVG from '../../assets/svg/services/webdev.svg'
 import useStyles from '../../styles/home/Services.style'
+import ServicesData from '../../data/Services.list'
 
-function Services() {
+function Services(props) {
   const classes = useStyles()
+
+  const serviceList = () => (
+    <div>
+      {ServicesData.map((service) => (
+        <ListItem key={service.id} dense button>
+          <ListItemText
+            id={service.id}
+            primary={service.serviceName}
+            className={classes.menuText}
+          />
+          <ListItemSecondaryAction>
+            <Radio
+              value={service.id}
+              name="serviceName"
+              className={classes.radiobtn}
+            />
+          </ListItemSecondaryAction>
+        </ListItem>
+      ))}
+    </div>
+  )
+
+  const serviceListMobile = () => (
+    <div>
+      {ServicesData.map((service) => (
+        <Radio
+          value={service.id}
+          name="serviceName"
+          className={`${classes.radiobtn} ${classes.radiobtnRightMobile}`}
+        />
+      ))}
+    </div>
+  )
 
   return (
     <div className={classes.root} align="center">
@@ -21,8 +55,19 @@ function Services() {
         <div className={classes.continue}></div>
       </div>
 
+      <div className={classes.RightMenuMobile} align="center">
+        {serviceListMobile()}
+      </div>
+
       <Grid container spacing={0} className={classes.zindex}>
-        <Grid item xs={5}>
+        <Grid xs={12} className={classes.mobileSVGImage}>
+          <img
+            src={ServicesWebDevSVG}
+            className={classes.servicesSVGmobile}
+            alt={ServicesWebDevSVG}
+          />
+        </Grid>
+        <Grid item xs={12} md={5} lg={5}>
           <div className={classes.details}>
             <Typography variant="h3" gutterBottom className={classes.title}>
               <div className={classes.textTitle}>Web Development</div>
@@ -46,7 +91,12 @@ function Services() {
             </Button>
           </div>
         </Grid>
-        <Grid item xs={7} className={classes.noOverflow}>
+
+        <Grid
+          item
+          xs={7}
+          className={`${classes.noOverflow} ${classes.menuRightWrap}`}
+        >
           <div className={classes.skewed}>
             <div className={classes.skewedSVG}>
               <img
@@ -56,61 +106,11 @@ function Services() {
               />
             </div>
             <div className={classes.skewedContent}>
-              <List className={classes.menuRight}>
-                <ListItem key="1" dense button>
-                  <ListItemText id="1" primary="Web Development" />
-                  <ListItemSecondaryAction>
-                    <Radio value="1" name="1" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-
-                <ListItem key="2" dense button>
-                  <ListItemText id="2" primary="Web Design" />
-                  <ListItemSecondaryAction>
-                    <Radio value="2" name="2" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-
-                <ListItem key="3" dense button>
-                  <ListItemText id="3" primary="Mobile App Development" />
-                  <ListItemSecondaryAction>
-                    <Radio value="3" name="3" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-
-                <ListItem key="4" dense button>
-                  <ListItemText id="4" primary="Api Development" />
-                  <ListItemSecondaryAction>
-                    <Radio value="4" name="4" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-
-                <ListItem key="5" dense button>
-                  <ListItemText id="5" primary="Ecommerce" />
-                  <ListItemSecondaryAction>
-                    <Radio value="5" name="5" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-
-                <ListItem key="6" dense button>
-                  <ListItemText id="6" primary="Payment Integration" />
-                  <ListItemSecondaryAction>
-                    <Radio value="6" name="6" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-
-                <ListItem key="7" dense button>
-                  <ListItemText id="7" primary="SEO Integration" />
-                  <ListItemSecondaryAction>
-                    <Radio value="7" name="7" className={classes.radiobtn} />
-                  </ListItemSecondaryAction>
-                </ListItem>
-              </List>
+              <List className={classes.menuRight}>{serviceList()}</List>
             </div>
           </div>
         </Grid>
       </Grid>
-
       <div className={classes.skewBG}>
         <img
           src="https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?cs=srgb&dl=pexels-tranmautritam-251225.jpg&fm=jpg"

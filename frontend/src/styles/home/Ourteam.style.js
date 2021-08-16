@@ -6,6 +6,8 @@ const useStyles = makeStyles(() =>
     root: {
       backgroundColor: '#3C065E',
       flexGrow: 1,
+      zIndex: 2,
+      position: 'relative',
     },
     titlemain: {
       alignContent: 'center',
@@ -108,7 +110,7 @@ const useStyles = makeStyles(() =>
       marginTop: -80,
     },
     avatarText: {
-      color: 'rgba(255,255,255,0.8)',
+      color: '#f6beef',
       marginTop: 30,
       textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
     },

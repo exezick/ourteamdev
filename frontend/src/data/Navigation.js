@@ -16,11 +16,16 @@ const NavigationData = [
   },
   {
     id: 4,
+    linkto: '/blog',
+    name: 'BLOG',
+  },
+  {
+    id: 5,
     linkto: '/aboutus',
     name: 'ABOUT US',
   },
   {
-    id: 5,
+    id: 6,
     linkto: '/contactus',
     name: 'CONTACT US',
   },

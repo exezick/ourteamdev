@@ -13,7 +13,7 @@ function Footer() {
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
-        <Typography variant="h6" align="left" gutterBottom>
+        <Typography variant="h6" gutterBottom>
           <Link to="/">
             <img src={LogoSVG} className={classes.LogoSVG} alt={LogoSVG} />
           </Link>

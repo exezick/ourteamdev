@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) =>
       [theme.breakpoints.down('sm')]: {
         textAlign: 'center',
         width: 'auto',
+        fontSize: 23,
       },
     },
     subtitle: {
@@ -78,6 +79,7 @@ const useStyles = makeStyles((theme) =>
       [theme.breakpoints.down('sm')]: {
         width: 'auto',
         textAlign: 'left',
+        fontSize: 15,
       },
     },
     btnshire: {

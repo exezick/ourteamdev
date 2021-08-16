@@ -8,10 +8,26 @@ const useStyles = makeStyles((theme) =>
       height: '100vh',
       borderRadius: 0,
       zIndex: 20,
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto !important',
+        paddingBottom: 50,
+      },
+      [theme.breakpoints.only('md')]: {
+        height: 'auto',
+        paddingBottom: 70,
+      },
     },
     main: {
       overflowY: 'hidden',
       height: '100vh',
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto !important',
+      },
+      [theme.breakpoints.only('md')]: {
+        height: 'auto !important',
+        overflowY: 'hidden',
+        background: '#eee',
+      },
     },
     details: {
       display: 'flex',
@@ -30,13 +46,19 @@ const useStyles = makeStyles((theme) =>
         paddingLeft: 40,
         textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
       },
+      [theme.breakpoints.only('md')]: {
+        paddingTop: 40,
+      },
     },
     title: {
       fontSize: 41,
       fontWeight: 'bold',
       color: '#FFF',
       [theme.breakpoints.down('sm')]: {
-        fontSize: 27,
+        fontSize: 20,
+      },
+      [theme.breakpoints.only('md')]: {
+        fontSize: 33,
       },
     },
     textTitle: {
@@ -63,19 +85,20 @@ const useStyles = makeStyles((theme) =>
       marginRight: 60,
       [theme.breakpoints.down('sm')]: {
         float: 'none',
-        width: '88%',
+        width: 'auto',
+        height: 200,
         position: 'relative',
         zIndex: 2,
-        top: -20,
         marginRight: 20,
         marginLeft: 25,
-        opacity: 0.3,
+        display: 'none',
       },
     },
     btnshire: {
       width: 240,
       marginTop: 60,
       paddingLeft: 10,
+      marginLeft: 10,
       borderRadius: 0,
       fontSize: 26,
       fontWeight: 'bold',
@@ -85,9 +108,13 @@ const useStyles = makeStyles((theme) =>
       border: 0,
       color: 'white',
       [theme.breakpoints.down('sm')]: {
-        width: 190,
+        width: 160,
         marginTop: 30,
         fontSize: 17,
+      },
+      [theme.breakpoints.only('md')]: {
+        fontSize: 20,
+        width: 210,
       },
     },
     zindex: {
@@ -106,6 +133,12 @@ const useStyles = makeStyles((theme) =>
       marginTop: -120,
       marginLeft: -60,
       zIndex: 1,
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.only('md')]: {
+        display: 'none',
+      },
     },
     circularbg2: {
       width: 70,
@@ -118,6 +151,12 @@ const useStyles = makeStyles((theme) =>
       marginTop: -100,
       marginLeft: 40,
       zIndex: 2,
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.only('md')]: {
+        display: 'none',
+      },
     },
     circularbg3: {
       width: 35,
@@ -130,6 +169,12 @@ const useStyles = makeStyles((theme) =>
       marginTop: -105,
       marginLeft: 90,
       zIndex: 3,
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.only('md')]: {
+        display: 'none',
+      },
     },
   }),
 )

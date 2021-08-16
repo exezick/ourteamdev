@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) =>
       backgroundRepeat: 'no-repeat',
       [theme.breakpoints.down('sm')]: {
         height: 'auto',
-        paddingTop: '20px',
-        paddingBottom: '50px',
+        paddingTop: '40px',
+        paddingBottom: '70px',
       },
       [theme.breakpoints.up('md')]: {
         height: 'auto',

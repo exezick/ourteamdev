@@ -5,13 +5,17 @@ import Contactusform from '../../components/contactus/Cotactusform'
 import ContactInfo from '../../components/contactus/ContactInfo'
 import contactIMG from '../../assets/img/contactus/contactus-bg.jpg'
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       paddingTop: '20px',
       height: '92vh',
       overflowY: 'hidden',
       background: '#3C065E',
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto',
+        overflowY: 'none',
+      },
     },
     titlemain: {
       alignContent: 'center',
@@ -20,6 +24,10 @@ const useStyles = makeStyles(() =>
       width: '400px',
       position: 'relative',
       zIndex: 5,
+      [theme.breakpoints.down('sm')]: {
+        width: 'auto',
+        textAlign: 'center',
+      },
     },
     titleBar: {
       borderBottom: '10px solid #B918AB',
@@ -28,6 +36,9 @@ const useStyles = makeStyles(() =>
       marginTop: '55px',
       marginLeft: '20px',
       float: 'left',
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
     },
     titleText: {
       fontWeight: 'bold',
@@ -35,6 +46,11 @@ const useStyles = makeStyles(() =>
       width: 'auto',
       float: 'left',
       color: '#FFF',
+      [theme.breakpoints.down('sm')]: {
+        textAlign: 'center',
+        fontSize: 35,
+        float: 'none',
+      },
     },
     continue: {
       clear: 'both',
@@ -53,6 +69,9 @@ const useStyles = makeStyles(() =>
       height: 'auto',
       position: 'relative',
       zIndex: 1,
+      [theme.breakpoints.down('sm')]: {
+        paddingBottom: 50,
+      },
     },
     rightGrid: {
       height: '95vh',
@@ -65,6 +84,13 @@ const useStyles = makeStyles(() =>
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
+      [theme.breakpoints.down('sm')]: {
+        zIndex: 0,
+        marginTop: 0,
+        height: 'auto',
+        paddingTop: 50,
+        paddingBottom: 20,
+      },
     },
     subtitle: {
       fontSize: 18,
@@ -89,10 +115,10 @@ function Contactus() {
       </div>
 
       <Grid container spacing={0} className={classes.SVGwrap}>
-        <Grid item xs={6} className={classes.LeftGrid}>
+        <Grid item xs={12} md={6} lg={6} className={classes.LeftGrid}>
           <Contactusform />
         </Grid>
-        <Grid item xs={6} className={classes.rightGrid}>
+        <Grid item xs={12} md={6} lg={6} className={classes.rightGrid}>
           <ContactInfo />
         </Grid>
       </Grid>

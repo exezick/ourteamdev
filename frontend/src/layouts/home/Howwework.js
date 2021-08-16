@@ -4,13 +4,21 @@ import Grid from '@material-ui/core/Grid'
 import HowWeWorkSVG from '../../assets/svg/how-we-work.svg'
 import Typography from '@material-ui/core/Typography'
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       paddingTop: '20px',
       height: '92vh',
       overflowY: 'hidden',
       background: '#f9f2fd',
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto',
+        paddingBottom: 70,
+      },
+      [theme.breakpoints.only('md')]: {
+        height: 'auto',
+        paddingBottom: 70,
+      },
     },
     titlemain: {
       alignContent: 'center',
@@ -19,6 +27,10 @@ const useStyles = makeStyles(() =>
       width: '470px',
       zIndex: 10,
       position: 'inherit',
+      [theme.breakpoints.down('sm')]: {
+        width: 'auto',
+        textAlign: 'center',
+      },
     },
     titleBar: {
       borderBottom: '10px solid #B918AB',
@@ -27,6 +39,9 @@ const useStyles = makeStyles(() =>
       marginTop: '55px',
       marginLeft: '20px',
       float: 'left',
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
     },
     titleText: {
       fontWeight: 'bold',
@@ -34,6 +49,11 @@ const useStyles = makeStyles(() =>
       width: 'auto',
       float: 'left',
       color: '#3C065E',
+      [theme.breakpoints.down('sm')]: {
+        textAlign: 'center',
+        fontSize: 35,
+        float: 'none',
+      },
     },
     continue: {
       clear: 'both',
@@ -42,6 +62,9 @@ const useStyles = makeStyles(() =>
       paddingTop: 50,
       paddingLeft: 20,
       textAlign: 'left',
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: 0,
+      },
     },
     SVGwrap: {
       marginTop: '80px',
@@ -53,6 +76,12 @@ const useStyles = makeStyles(() =>
     },
     svgbanner: {
       width: '75%',
+      [theme.breakpoints.down('sm')]: {
+        width: '65%',
+      },
+      [theme.breakpoints.only('md')]: {
+        width: '80%',
+      },
     },
     subtitle: {
       fontSize: 16,
@@ -61,6 +90,12 @@ const useStyles = makeStyles(() =>
       paddingLeft: 10,
       marginTop: 10,
       textAlign: 'left',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 14,
+        width: 'auto',
+        paddingLeft: 30,
+        paddingRight: 30,
+      },
     },
     circularbg: {
       width: 270,
@@ -74,6 +109,12 @@ const useStyles = makeStyles(() =>
       marginRight: 0,
       marginTop: -50,
       zIndex: 1,
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.only('md')]: {
+        display: 'none',
+      },
     },
     circularbg2: {
       width: 50,
@@ -86,6 +127,12 @@ const useStyles = makeStyles(() =>
       marginTop: -50,
       marginRight: 0,
       zIndex: 2,
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.only('md')]: {
+        display: 'none',
+      },
     },
   }),
 )
@@ -102,14 +149,14 @@ function Howwework() {
       </div>
 
       <Grid container spacing={0} className={classes.SVGwrap}>
-        <Grid item xs={6} className={classes.LeftGrid}>
+        <Grid item xs={12} md={6} lg={6} className={classes.LeftGrid}>
           <img
             src={HowWeWorkSVG}
             className={classes.svgbanner}
             alt={HowWeWorkSVG}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6} lg={6}>
           <div className={classes.details}>
             <Typography
               variant="subtitle1"

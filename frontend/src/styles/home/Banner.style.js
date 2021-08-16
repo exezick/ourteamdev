@@ -93,6 +93,9 @@ const useStyles = makeStyles((theme) =>
         marginLeft: 25,
         display: 'none',
       },
+      [theme.breakpoints.only('md')]: {
+        marginTop: -380,
+      },
     },
     btnshire: {
       width: 240,

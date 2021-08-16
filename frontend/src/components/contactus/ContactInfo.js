@@ -10,17 +10,25 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     avatar: {
       width: 70,
       height: 70,
       background: 'rgba(185,24,171,0.9)',
+      [theme.breakpoints.down('sm')]: {
+        width: 50,
+        height: 50,
+      },
     },
     iconSize: {
       width: 40,
       height: 40,
       color: 'rgba(255,255,255,0.8)',
+      [theme.breakpoints.down('sm')]: {
+        width: 30,
+        height: 30,
+      },
     },
     contactText: {
       color: '#fff',
@@ -30,6 +38,20 @@ const useStyles = makeStyles(() =>
       margin: '0px auto',
       width: '400px',
       marginBottom: 40,
+      [theme.breakpoints.down('sm')]: {
+        width: '320px',
+      },
+    },
+    contactTitle: {
+      fontSize: 21,
+      color: '#fff',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 20,
+      },
+    },
+    contactPosition: {
+      color: '#e4e2e2',
+      fontSize: 15,
     },
   }),
 )
@@ -48,12 +70,12 @@ function ContactInfo() {
           </ListItemAvatar>
           <ListItemText
             primary={
-              <Typography style={{ color: 'white', fontSize: 22 }}>
+              <Typography className={classes.contactTitle}>
                 ourteamdev@gmail.com
               </Typography>
             }
             secondary={
-              <Typography style={{ color: '#e4e2e2' }}>
+              <Typography className={classes.contactPosition}>
                 Email Address
               </Typography>
             }
@@ -69,12 +91,12 @@ function ContactInfo() {
           </ListItemAvatar>
           <ListItemText
             primary={
-              <Typography style={{ color: 'white', fontSize: 22 }}>
+              <Typography className={classes.contactTitle}>
                 09091234567
               </Typography>
             }
             secondary={
-              <Typography style={{ color: '#e4e2e2' }}>
+              <Typography className={classes.contactPosition}>
                 Contact Number
               </Typography>
             }
@@ -90,12 +112,14 @@ function ContactInfo() {
           </ListItemAvatar>
           <ListItemText
             primary={
-              <Typography style={{ color: 'white', fontSize: 22 }}>
+              <Typography className={classes.contactTitle}>
                 Legazpi, Albay
               </Typography>
             }
             secondary={
-              <Typography style={{ color: '#e4e2e2' }}>Address</Typography>
+              <Typography className={classes.contactPosition}>
+                Address
+              </Typography>
             }
             className={classes.contactText}
           />

@@ -18,6 +18,12 @@ const useStyles = makeStyles((theme) =>
       justifyContent: 'center',
       paddingBottom: 30,
       paddingTop: 20,
+      [theme.breakpoints.down('sm')]: {
+        width: '80%',
+      },
+      [theme.breakpoints.only('md')]: {
+        width: '90%',
+      },
     },
     textfieldFont: {
       color: 'rgba(255,255,255,0.8)',

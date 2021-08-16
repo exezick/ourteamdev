@@ -29,8 +29,10 @@ function Ourteam() {
           {ourteamList.map((avatar) => (
             <Grid
               item
-              xs={6}
-              sm={3}
+              xs={12}
+              sm={6}
+              md={3}
+              lg={3}
               className={classes.avatarGrid}
               key={avatar.id}
             >

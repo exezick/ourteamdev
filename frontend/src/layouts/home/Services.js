@@ -39,6 +39,7 @@ function Services(props) {
     <div>
       {ServicesData.map((service) => (
         <Radio
+          key={service.id}
           value={service.id}
           name="serviceName"
           className={`${classes.radiobtn} ${classes.radiobtnRightMobile}`}

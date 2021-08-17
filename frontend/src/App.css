@@ -1,5 +1,6 @@
 body{
   overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
 }
 
 .buttonsend:hover{
@@ -26,6 +27,14 @@ body{
 
 .menudrawer{
   padding-left: 20px !important;
+}
+
+.main-container{
+  scroll-snap-type: y mandatory;
+}
+
+.child-container {
+  scroll-snap-align: start;
 }
 
 /* Extra small devices (phones, 600px and down) */

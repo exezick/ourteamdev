@@ -6,12 +6,12 @@ import Services from '../../layouts/home/Services'
 
 function Home() {
   return (
-    <div>
-      <Banner />
-      <Services />
-      <Ourteam />
-      <Howwework />
-      <Contactus />
+    <div className={`main-container`}>
+      <Banner className={`child-container`} />
+      <Services className={`child-container`} />
+      <Ourteam className={`child-container`} />
+      <Howwework className={`child-container`} />
+      <Contactus className={`child-container`} />
     </div>
   )
 }

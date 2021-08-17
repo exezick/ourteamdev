@@ -46,12 +46,15 @@ const useStyles = makeStyles((theme) =>
       fontSize: 21,
       color: '#fff',
       [theme.breakpoints.down('sm')]: {
-        fontSize: 20,
+        fontSize: 16,
       },
     },
     contactPosition: {
       color: '#e4e2e2',
       fontSize: 15,
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 14,
+      },
     },
   }),
 )

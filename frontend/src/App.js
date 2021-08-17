@@ -11,12 +11,14 @@ import Home from './pages/home/Home'
 import Services from './pages/services/Services'
 import NotFound404 from './pages/notfound404/notfound404'
 import Footer from './layouts/footer/Footer'
+import ScrollToTop from './components/scrolltotop/ScrollToTop'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navigation />
+        <ScrollToTop />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/services" exact component={Services} />

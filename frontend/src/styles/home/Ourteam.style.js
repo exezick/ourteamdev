@@ -71,6 +71,11 @@ const useStyles = makeStyles((theme) =>
         height: 'auto',
         paddingBottom: 60,
       },
+      [theme.breakpoints.only('md')]: {
+        overflowY: 'none',
+        height: 'auto',
+        paddingBottom: 60,
+      },
     },
     avatarWrap: {
       marginTop: '70px',

@@ -48,6 +48,8 @@ const useStyles = makeStyles((theme) =>
       [theme.breakpoints.down('sm')]: {
         width: 35,
         height: 35,
+        marginLeft: 10,
+        marginRight: 10,
       },
     },
     social: {

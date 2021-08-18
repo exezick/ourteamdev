@@ -11,6 +11,12 @@ const useStylesService = makeStyles((theme) =>
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
     },
+    titlemain: {
+      width: 430,
+      [theme.breakpoints.down('sm')]: {
+        width: 'auto',
+      },
+    },
   }),
 )
 
@@ -20,7 +26,7 @@ function Servicesbanner() {
 
   return (
     <div className={`${classes.root} ${classesService.root}`} align="center">
-      <div className={classes.titlemain}>
+      <div className={`${classes.titlemain} ${classesService.titlemain}`}>
         <h1 className={classes.titleText}>OUR SERVICES</h1>
         <div className={classes.titleBar}></div>
         <div className={classes.continue}></div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import useStyles from '../../styles/BannerTitle'
-import bgIMG from '../../assets/img/ourwork/ourworkbg.jpg'
+import bgIMG from '../../assets/img/blog/blogbg.jpg'
 
-const useStylesBanner = makeStyles((theme) =>
+const useStylesBlog = makeStyles((theme) =>
   createStyles({
     root: {
       background: `url(${bgIMG})`,
@@ -12,7 +12,7 @@ const useStylesBanner = makeStyles((theme) =>
       backgroundRepeat: 'no-repeat',
     },
     titlemain: {
-      width: 370,
+      width: 240,
       [theme.breakpoints.down('sm')]: {
         width: 'auto',
       },
@@ -20,14 +20,14 @@ const useStylesBanner = makeStyles((theme) =>
   }),
 )
 
-function Ourworkbanner() {
+function BlogBanner() {
   const classes = useStyles()
-  const classesBanner = useStylesBanner()
+  const classesBlog = useStylesBlog()
 
   return (
-    <div className={`${classes.root} ${classesBanner.root}`} align="center">
-      <div className={`${classes.titlemain} ${classesBanner.titlemain}`}>
-        <h1 className={classes.titleText}>OUR WORK</h1>
+    <div className={`${classes.root} ${classesBlog.root}`} align="center">
+      <div className={`${classes.titlemain} ${classesBlog.titlemain}`}>
+        <h1 className={classes.titleText}>BLOG</h1>
         <div className={classes.titleBar}></div>
         <div className={classes.continue}></div>
       </div>
@@ -35,4 +35,4 @@ function Ourworkbanner() {
   )
 }
 
-export default Ourworkbanner
+export default BlogBanner

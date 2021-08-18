@@ -8,13 +8,13 @@ import Button from '@material-ui/core/Button'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 import useStyles from '../../styles/ourwork/WorkCard.style'
 
-function WorkCard({ portfolio }) {
+function BlogCard({ blogdata }) {
   const classes = useStyles()
 
   return (
     <div align="center">
       <Card className={classes.root} elevation={3}>
-        <CardMedia className={classes.media} image={portfolio.image} />
+        <CardMedia className={classes.media} image={blogdata.image} />
         <CardContent className={classes.content}>
           <Typography
             gutterBottom
@@ -22,7 +22,7 @@ function WorkCard({ portfolio }) {
             component="h2"
             className={classes.titleLimit}
           >
-            {portfolio.title}
+            {blogdata.title}
           </Typography>
           <Typography
             variant="body2"
@@ -30,17 +30,21 @@ function WorkCard({ portfolio }) {
             component="p"
             className={classes.textLimit}
           >
-            {portfolio.content}
+            {blogdata.content}
           </Typography>
         </CardContent>
-        <CardActions className={classes.actionWrap}>
+
+        <CardActions disableSpacing className={classes.actionWrap}>
+          <Typography className={classes.dateposted} color="textSecondary">
+            {blogdata.dateposted}
+          </Typography>
           <Button
             variant="text"
             disableElevation
             className={`${classes.btnshire} btnhire`}
             endIcon={<ArrowForwardIcon />}
           >
-            View
+            Read
           </Button>
         </CardActions>
       </Card>
@@ -48,4 +52,4 @@ function WorkCard({ portfolio }) {
   )
 }
 
-export default WorkCard
+export default BlogCard

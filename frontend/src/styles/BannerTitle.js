@@ -17,10 +17,6 @@ const useStyles = makeStyles((theme) =>
       },
     },
     titlemain: {
-      alignContent: 'center',
-      textAlign: 'center',
-      justifyContent: 'center',
-      width: '435px',
       position: 'relative',
       zIndex: 5,
       marginTop: 50,

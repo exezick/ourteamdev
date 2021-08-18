@@ -32,6 +32,25 @@ const useStyles = makeStyles((theme) =>
     content: {
       textAlign: 'left',
     },
+    titleLimit: {
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      display: '-webkit-box',
+      lineClamp: 2,
+      boxOrient: 'vertical',
+    },
+    textLimit: {
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      display: '-webkit-box',
+      lineClamp: 2,
+      boxOrient: 'vertical',
+    },
+    dateposted: {
+      fontSize: 13,
+      padding: 0,
+      paddingLeft: 10,
+    },
   }),
 )
 

@@ -9,6 +9,7 @@ import {
 import Navigation from './layouts/navigation/Navigation'
 import Home from './pages/home/Home'
 import Services from './pages/services/Services'
+import Ourwork from './pages/ourwork/Ourwork'
 import NotFound404 from './pages/notfound404/notfound404'
 import Footer from './layouts/footer/Footer'
 import ScrollToTop from './components/scrolltotop/ScrollToTop'
@@ -22,6 +23,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/services" exact component={Services} />
+          <Route path="/ourwork" exact component={Ourwork} />
           <Route path="/404" component={NotFound404} />
           <Route path="">
             <Redirect to="/404" />

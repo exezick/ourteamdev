@@ -1,6 +1,6 @@
 import React from 'react'
-import Servicesbanner from '../../layouts/services/Servicesbanner'
-import Serviceslist from '../../layouts/services/Serviceslist'
+import Servicesbanner from '../../components/services/Servicesbanner'
+import Serviceslist from '../../components/services/Serviceslist'
 
 function Services() {
   return (

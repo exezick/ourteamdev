@@ -88,7 +88,6 @@ const useStyles = makeStyles((theme) =>
       paddingLeft: 10,
       borderRadius: 0,
       fontSize: 16,
-      fontWeight: 'bold',
       paddingTop: 5,
       paddingBottom: 5,
       background: '#B918AB',

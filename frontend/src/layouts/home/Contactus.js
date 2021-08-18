@@ -115,10 +115,10 @@ function Contactus() {
       </div>
 
       <Grid container spacing={0} className={classes.SVGwrap}>
-        <Grid item xs={12} md={6} lg={6} className={classes.LeftGrid}>
+        <Grid item={true} xs={12} md={6} lg={6} className={classes.LeftGrid}>
           <Contactusform />
         </Grid>
-        <Grid item xs={12} md={6} lg={6} className={classes.rightGrid}>
+        <Grid item={true} xs={12} md={6} lg={6} className={classes.rightGrid}>
           <ContactInfo />
         </Grid>
       </Grid>

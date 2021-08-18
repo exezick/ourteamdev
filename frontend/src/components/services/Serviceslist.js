@@ -26,7 +26,7 @@ function Serviceslist(props) {
           }
         >
           <Grid
-            item
+            item={true}
             xs={12}
             md={6}
             className={`${classes.LeftGrid}`}
@@ -40,7 +40,7 @@ function Serviceslist(props) {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} className={classes.rightGrid}>
+          <Grid item={true} xs={12} md={6} className={classes.rightGrid}>
             <div className={classes.details}>
               <Typography variant="h3" gutterBottom className={classes.title}>
                 {service.serviceName}

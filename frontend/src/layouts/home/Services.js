@@ -61,7 +61,7 @@ function Services(props) {
       </div>
 
       <Grid container spacing={0} className={classes.zindex}>
-        <Grid xs={12} className={classes.mobileSVGImage}>
+        <Grid item xs={12} className={classes.mobileSVGImage}>
           <img
             src={ServicesWebDevSVG}
             className={classes.servicesSVGmobile}

@@ -19,7 +19,7 @@ function OurworkContent() {
   return (
     <div className={classes.root} align="center">
       <Grid container spacing={3}>
-        <Grid item xs={12} md={12} lg={12}>
+        <Grid item={true} xs={12} md={12} lg={12}>
           <Paper className={`${classes.paper} ${classes.menu}`} elevation={1}>
             <Tabs
               value={value}
@@ -35,7 +35,7 @@ function OurworkContent() {
         </Grid>
 
         {PortfolioData.map((portfolio) => (
-          <Grid item xs={12} md={6} lg={6} key={portfolio.id}>
+          <Grid key={portfolio.id} item xs={12} md={6} lg={6}>
             <WorkCard portfolio={portfolio} />
           </Grid>
         ))}

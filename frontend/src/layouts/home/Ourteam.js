@@ -28,7 +28,7 @@ function Ourteam() {
         <Grid container spacing={0} className={classes.avatarWrap}>
           {ourteamList.map((avatar) => (
             <Grid
-              item
+              item={true}
               xs={12}
               sm={6}
               md={3}

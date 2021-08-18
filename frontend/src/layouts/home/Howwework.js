@@ -149,14 +149,14 @@ function Howwework() {
       </div>
 
       <Grid container spacing={0} className={classes.SVGwrap}>
-        <Grid item xs={12} md={6} lg={6} className={classes.LeftGrid}>
+        <Grid item={true} xs={12} md={6} lg={6} className={classes.LeftGrid}>
           <img
             src={HowWeWorkSVG}
             className={classes.svgbanner}
             alt={HowWeWorkSVG}
           />
         </Grid>
-        <Grid item xs={12} md={6} lg={6}>
+        <Grid item={true} xs={12} md={6} lg={6}>
           <div className={classes.details}>
             <Typography
               variant="subtitle1"

@@ -12,6 +12,7 @@ import Services from './pages/services/Services'
 import Ourwork from './pages/ourwork/Ourwork'
 import Blog from './pages/blog/Blog'
 import ContactUs from './pages/contactus/ContactUs'
+import AboutUs from './pages/aboutus/AboutUs'
 import NotFound404 from './pages/notfound404/notfound404'
 import Footer from './layouts/footer/Footer'
 import ScrollToTop from './components/scrolltotop/ScrollToTop'
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ourwork" exact component={Ourwork} />
           <Route path="/blog" exact component={Blog} />
           <Route path="/contactus" exact component={ContactUs} />
+          <Route path="/aboutus" exact component={AboutUs} />
           <Route path="/404" component={NotFound404} />
           <Route path="">
             <Redirect to="/404" />

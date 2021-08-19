@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) =>
       position: 'relative',
       zIndex: 5,
       marginTop: 50,
+      textShadow: '1px 1px 2px rgba(0,0,0,0.4)',
       [theme.breakpoints.down('sm')]: {
         width: 'auto',
         marginTop: 30,

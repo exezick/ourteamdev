@@ -97,7 +97,7 @@ function Services(props) {
             <Typography
               variant="subtitle1"
               gutterBottom
-              className={classes.subtitle}
+              className={`${classes.subtitle} ${classes.textLimit}`}
             >
               {service.description}
             </Typography>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
@@ -7,45 +7,65 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import Radio from '@material-ui/core/Radio'
-import ServicesWebDevSVG from '../../assets/svg/services/webdev.svg'
 import useStyles from '../../styles/home/Services.style'
 import ServicesData from '../../data/Services.list'
+
+import useServiceHook from '../../hooks/useServiceHook'
 
 function Services(props) {
   const classes = useStyles()
 
-  const serviceList = () => (
-    <div>
-      {ServicesData.map((service) => (
-        <ListItem key={service.id} dense button>
-          <ListItemText
-            id={service.id}
-            primary={service.serviceName}
-            className={classes.menuText}
-          />
-          <ListItemSecondaryAction>
-            <Radio
-              value={service.id}
-              name="serviceName"
-              className={classes.radiobtn}
+  // By default we'll set it as the first service
+  const [service, selectServiceOnChange, selectServiceOnClick] =
+    useServiceHook(1)
+
+  const serviceList = useMemo(
+    () => (
+      <>
+        {ServicesData.map((s) => (
+          <ListItem
+            key={s.id}
+            dense
+            button
+            onClick={() => selectServiceOnClick(s.id)}
+          >
+            <ListItemText
+              id={s.id}
+              primary={s.serviceName}
+              className={classes.menuText}
             />
-          </ListItemSecondaryAction>
-        </ListItem>
-      ))}
-    </div>
+            <ListItemSecondaryAction>
+              <Radio
+                checked={service.id === s.id}
+                value={s.id}
+                name={s.serviceName}
+                className={classes.radiobtn}
+                onChange={selectServiceOnChange}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        ))}
+      </>
+    ),
+    [service, selectServiceOnChange, selectServiceOnClick, classes],
   )
 
-  const serviceListMobile = () => (
-    <div>
-      {ServicesData.map((service) => (
-        <Radio
-          key={service.id}
-          value={service.id}
-          name="serviceName"
-          className={`${classes.radiobtn} ${classes.radiobtnRightMobile}`}
-        />
-      ))}
-    </div>
+  const serviceListMobile = useMemo(
+    () => (
+      <>
+        {ServicesData.map((s) => (
+          <Radio
+            checked={service.id === s.id}
+            key={s.id}
+            value={s.id}
+            name={s.serviceName}
+            className={`${classes.radiobtn} ${classes.radiobtnRightMobile}`}
+            onChange={selectServiceOnChange}
+          />
+        ))}
+      </>
+    ),
+    [service, selectServiceOnChange, classes],
   )
 
   return (
@@ -57,31 +77,29 @@ function Services(props) {
       </div>
 
       <div className={classes.RightMenuMobile} align="center">
-        {serviceListMobile()}
+        {serviceListMobile}
       </div>
 
       <Grid container spacing={0} className={classes.zindex}>
         <Grid item xs={12} className={classes.mobileSVGImage}>
           <img
-            src={ServicesWebDevSVG}
+            src={service.servicesIMG}
             className={classes.servicesSVGmobile}
-            alt={ServicesWebDevSVG}
+            alt={service.servicesIMG}
           />
         </Grid>
+
         <Grid item xs={12} md={5} lg={5}>
           <div className={classes.details}>
             <Typography variant="h3" gutterBottom className={classes.title}>
-              <div className={classes.textTitle}>Web Development</div>
+              <div className={classes.textTitle}>{service.serviceName}</div>
             </Typography>
             <Typography
               variant="subtitle1"
               gutterBottom
               className={classes.subtitle}
             >
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia curae; Nulla interdum, tortor id viverra
-              scelerisque, est sem rhoncus massa, a tempus turpis augue sed
-              justo.
+              {service.description}
             </Typography>
             <Button
               variant="text"
@@ -101,20 +119,20 @@ function Services(props) {
           <div className={classes.skewed}>
             <div className={classes.skewedSVG}>
               <img
-                src={ServicesWebDevSVG}
+                src={service.servicesIMG}
                 className={classes.servicesSVG}
-                alt={ServicesWebDevSVG}
+                alt={service.servicesIMG}
               />
             </div>
             <div className={classes.skewedContent}>
-              <List className={classes.menuRight}>{serviceList()}</List>
+              <List className={classes.menuRight}>{serviceList}</List>
             </div>
           </div>
         </Grid>
       </Grid>
       <div className={classes.skewBG}>
         <img
-          src="https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?cs=srgb&dl=pexels-tranmautritam-251225.jpg&fm=jpg"
+          src={service.servicesBgIMG}
           className={classes.skewIMG}
           alt="skewIMG"
         />

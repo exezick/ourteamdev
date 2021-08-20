@@ -1,6 +1,7 @@
 body{
   overflow-x: hidden !important;
   scroll-behavior: smooth !important;
+  background: #3C065E !important;
 }
 
 .buttonsend:hover{
@@ -35,6 +36,13 @@ body{
 
 .child-container {
   scroll-snap-align: start;
+}
+
+.scroll-container {
+  position: fixed;
+  will-change: transform;
+  right: 0;
+  left: 0;
 }
 
 /* Extra small devices (phones, 600px and down) */

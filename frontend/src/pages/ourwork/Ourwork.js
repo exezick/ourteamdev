@@ -1,14 +1,14 @@
 import React from 'react'
-import Ourworkbanner from '../../components/ourwork/Ourworkbanner'
-import OurworkContent from '../../components/ourwork/OurworkContent'
+import OurWorkBanner from '../../components/ourwork/OurWorkBanner'
+import OurWorkContent from '../../components/ourwork/OurWorkContent'
 
-function Ourwork() {
+function OurWork() {
   return (
     <div>
-      <Ourworkbanner />
-      <OurworkContent />
+      <OurWorkBanner />
+      <OurWorkContent />
     </div>
   )
 }
 
-export default Ourwork
+export default OurWork

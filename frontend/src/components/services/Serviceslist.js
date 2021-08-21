@@ -1,12 +1,12 @@
 import React from 'react'
-import useStyles from '../../styles/services/Services.list.style'
+import useStyles from '../../styles/services/ServicesList.style'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import ServicesData from '../../data/Services.list'
 import isWidthUp from '@material-ui/core/withWidth'
 
-function Serviceslist(props) {
+function ServicesList(props) {
   const classes = useStyles()
 
   return (
@@ -67,4 +67,4 @@ function Serviceslist(props) {
   )
 }
 
-export default Serviceslist
+export default ServicesList

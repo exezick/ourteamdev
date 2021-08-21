@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import useStyles from '../../styles/home/Ourteam.style'
+import useStyles from '../../styles/home/OurTeam.style'
 import Grid from '@material-ui/core/Grid'
 import ourteamList from '../../data/OurTeam.list'
 

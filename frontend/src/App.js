@@ -9,7 +9,7 @@ import {
 import Navigation from './layouts/navigation/Navigation'
 import Home from './pages/home/Home'
 import Services from './pages/services/Services'
-import Ourwork from './pages/ourwork/Ourwork'
+import OurWork from './pages/ourwork/OurWork'
 import Blog from './pages/blog/Blog'
 import ContactUs from './pages/contactus/ContactUs'
 import AboutUs from './pages/aboutus/AboutUs'
@@ -30,7 +30,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/services" exact component={Services} />
-            <Route path="/ourwork" exact component={Ourwork} />
+            <Route path="/ourwork" exact component={OurWork} />
             <Route path="/blog" exact component={Blog} />
             <Route path="/contactus" exact component={ContactUs} />
             <Route path="/aboutus" exact component={AboutUs} />

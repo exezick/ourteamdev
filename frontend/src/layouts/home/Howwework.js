@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import HowWeWorkSVG from '../../assets/svg/how-we-work.svg'
 import Typography from '@material-ui/core/Typography'
 
-function Howwework() {
+function HowWeWork() {
   const classes = useStyles()
 
   return (
@@ -57,4 +57,4 @@ function Howwework() {
   )
 }
 
-export default Howwework
+export default HowWeWork

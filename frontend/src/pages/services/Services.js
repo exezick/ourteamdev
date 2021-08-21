@@ -1,12 +1,12 @@
 import React from 'react'
-import Servicesbanner from '../../components/services/Servicesbanner'
-import Serviceslist from '../../components/services/Serviceslist'
+import ServicesBanner from '../../components/services/ServicesBanner'
+import ServicesList from '../../components/services/ServicesList'
 
 function Services() {
   return (
     <div>
-      <Servicesbanner />
-      <Serviceslist />
+      <ServicesBanner />
+      <ServicesList />
     </div>
   )
 }

@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-function Cotactusform() {
+function CotactUsform() {
   const classes = useStyles()
 
   return (
@@ -171,4 +171,4 @@ function Cotactusform() {
   )
 }
 
-export default Cotactusform
+export default CotactUsform

@@ -20,7 +20,7 @@ const useStylesBanner = makeStyles((theme) =>
   }),
 )
 
-function Ourworkbanner() {
+function OurWorkBanner() {
   const classes = useStyles()
   const classesBanner = useStylesBanner()
 
@@ -35,4 +35,4 @@ function Ourworkbanner() {
   )
 }
 
-export default Ourworkbanner
+export default OurWorkBanner

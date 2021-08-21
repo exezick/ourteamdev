@@ -1,8 +1,8 @@
 import React from 'react'
-import ContactForm from '../../components/contactus/Cotactusform'
+import ContactUsForm from '../../components/contactus/CotactUsForm'
 import ContactInfo from '../../components/contactus/ContactInfo'
 import Grid from '@material-ui/core/Grid'
-import useStyles from '../../styles/contactus/Contactus.style'
+import useStyles from '../../styles/contactus/ContactUs.style'
 import ContactBanner from '../../components/contactus/ContactBanner'
 
 function ContactUs() {
@@ -20,7 +20,7 @@ function ContactUs() {
             lg={6}
             className={`${classes.LeftGrid} ${classes.topPadding}`}
           >
-            <ContactForm />
+            <ContactUsForm />
           </Grid>
           <Grid
             item={true}

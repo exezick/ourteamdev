@@ -1,8 +1,8 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import Contactusform from '../../components/contactus/Cotactusform'
+import ContactUsForm from '../../components/contactus/CotactUsForm'
 import ContactInfo from '../../components/contactus/ContactInfo'
-import useStyles from '../../styles/contactus/Contactus.style'
+import useStyles from '../../styles/contactus/ContactUs.style'
 
 function Contactus() {
   const classes = useStyles()
@@ -17,7 +17,7 @@ function Contactus() {
 
       <Grid container spacing={0} className={classes.SVGwrap}>
         <Grid item={true} xs={12} md={6} lg={6} className={classes.LeftGrid}>
-          <Contactusform />
+          <ContactUsForm />
         </Grid>
         <Grid item={true} xs={12} md={6} lg={6} className={classes.rightGrid}>
           <ContactInfo />

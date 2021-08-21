@@ -20,7 +20,7 @@ const useStylesService = makeStyles((theme) =>
   }),
 )
 
-function Servicesbanner() {
+function ServicesBanner() {
   const classes = useStyles()
   const classesService = useStylesService()
 
@@ -35,4 +35,4 @@ function Servicesbanner() {
   )
 }
 
-export default Servicesbanner
+export default ServicesBanner

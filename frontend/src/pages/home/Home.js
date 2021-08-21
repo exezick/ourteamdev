@@ -1,7 +1,7 @@
 import Banner from '../../layouts/home/Banner'
-import Contactus from '../../layouts/home/Contactus'
-import Howwework from '../../layouts/home/Howwework'
-import Ourteam from '../../layouts/home/Ourteam'
+import ContactUs from '../../layouts/home/ContactUs'
+import HowWeWork from '../../layouts/home/HowWeWork'
+import OurTeam from '../../layouts/home/OurTeam'
 import Services from '../../layouts/home/Services'
 
 function Home() {
@@ -9,9 +9,9 @@ function Home() {
     <div className={`main-container`}>
       <Banner className={`child-container`} />
       <Services className={`child-container`} />
-      <Ourteam className={`child-container`} />
-      <Howwework className={`child-container`} />
-      <Contactus className={`child-container`} />
+      <OurTeam className={`child-container`} />
+      <HowWeWork className={`child-container`} />
+      <ContactUs className={`child-container`} />
     </div>
   )
 }

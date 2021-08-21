@@ -1,5 +1,5 @@
 import React from 'react'
-import useStyles from '../../styles/ourwork/OurworkContent.style'
+import useStyles from '../../styles/ourwork/OurWorkContent.style'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Tabs from '@material-ui/core/Tabs'
@@ -8,7 +8,7 @@ import WorkCard from './WorkCard'
 import PortfolioData from '../../data/Portfolio.list'
 import Pagination from '@material-ui/lab/Pagination'
 
-function OurworkContent() {
+function OurWorkContent() {
   const classes = useStyles()
   const [value, setValue] = React.useState(0)
 
@@ -51,4 +51,4 @@ function OurworkContent() {
   )
 }
 
-export default OurworkContent
+export default OurWorkContent

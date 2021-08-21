@@ -1,6 +1,6 @@
 import React from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
-import Ourteam from '../../layouts/home/Ourteam'
+import OurTeam from '../../layouts/home/OurTeam'
 import AboutUsDetails from './AboutUsDetails'
 
 const useStyles = makeStyles((theme) =>
@@ -13,15 +13,15 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-function AboutusContent(props) {
+function AboutUsContent(props) {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
       <AboutUsDetails />
-      <Ourteam />
+      <OurTeam />
     </div>
   )
 }
 
-export default AboutusContent
+export default AboutUsContent

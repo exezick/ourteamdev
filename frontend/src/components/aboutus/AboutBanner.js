@@ -2,6 +2,8 @@ import React from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import useStyles from '../../styles/BannerTitle'
 import bgIMG from '../../assets/img/aboutus/aboutus.jpg'
+import FadeInFuntion from '../../animation/FadeIn'
+import BannerBorderEffect from '../../animation/BannerBorderEffect'
 
 const useStylesAbout = makeStyles((theme) =>
   createStyles({
@@ -25,13 +27,17 @@ function AboutBanner() {
   const classesAbout = useStylesAbout()
 
   return (
-    <div className={`${classes.root} ${classesAbout.root}`} align="center">
-      <div className={`${classes.titlemain} ${classesAbout.titlemain}`}>
-        <h1 className={classes.titleText}>ABOUT US</h1>
-        <div className={classes.titleBar}></div>
-        <div className={classes.continue}></div>
+    <FadeInFuntion duration={1000}>
+      <div className={`${classes.root} ${classesAbout.root}`} align="center">
+        <div className={`${classes.titlemain} ${classesAbout.titlemain}`}>
+          <h1 className={classes.titleText}>ABOUT US</h1>
+          <BannerBorderEffect>
+            <div className={classes.titleBar}></div>
+          </BannerBorderEffect>
+          <div className={classes.continue}></div>
+        </div>
       </div>
-    </div>
+    </FadeInFuntion>
   )
 }
 

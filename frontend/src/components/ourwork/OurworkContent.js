@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab'
 import WorkCard from './WorkCard'
 import PortfolioData from '../../data/Portfolio.list'
 import Pagination from '@material-ui/lab/Pagination'
+import ZoomEffect from '../../animation/ZoomEffect'
 
 function OurWorkContent() {
   const classes = useStyles()
@@ -18,7 +19,7 @@ function OurWorkContent() {
 
   return (
     <div className={classes.root} align="center">
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         <Grid item={true} xs={12} md={12} lg={12}>
           <Paper className={`${classes.paper} ${classes.menu}`} elevation={1}>
             <Tabs
@@ -34,9 +35,11 @@ function OurWorkContent() {
           </Paper>
         </Grid>
 
-        {PortfolioData.map((portfolio) => (
+        {PortfolioData.map((portfolio, i) => (
           <Grid key={portfolio.id} item xs={12} md={6} lg={6}>
-            <WorkCard portfolio={portfolio} />
+            <ZoomEffect duration={(i + 1) * 1000}>
+              <WorkCard portfolio={portfolio} />
+            </ZoomEffect>
           </Grid>
         ))}
       </Grid>

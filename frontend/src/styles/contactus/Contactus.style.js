@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) =>
       textAlign: 'left',
     },
     SVGwrap: {
-      marginTop: '40px',
+      marginTop: '60px',
       zIndex: 10,
       position: 'inherit',
     },

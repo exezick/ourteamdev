@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) =>
       flexGrow: 1,
       height: 'auto',
       background: '#FFF',
-      marginTop: -20,
+      marginTop: 0,
       paddingTop: 50,
       paddingBottom: 70,
       paddingRight: 150,

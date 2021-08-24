@@ -13,7 +13,7 @@ function BlogCard({ blogdata }) {
 
   return (
     <div align="center">
-      <Card className={classes.root} elevation={3}>
+      <Card className={`${classes.root} risingEffect`} elevation={2}>
         <CardMedia className={classes.media} image={blogdata.image} />
         <CardContent className={classes.content}>
           <Typography

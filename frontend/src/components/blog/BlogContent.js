@@ -4,16 +4,19 @@ import Grid from '@material-ui/core/Grid'
 import BlogCard from './BlogCard'
 import BlogData from '../../data/Blog.list'
 import Pagination from '@material-ui/lab/Pagination'
+import ZoomEffect from '../../animation/ZoomEffect'
 
 function BlogContent() {
   const classes = useStyles()
 
   return (
     <div className={classes.root} align="center">
-      <Grid container spacing={3}>
-        {BlogData.map((blog) => (
+      <Grid container spacing={4}>
+        {BlogData.map((blog, i) => (
           <Grid key={blog.id} item xs={12} md={4} lg={4}>
-            <BlogCard blogdata={blog} />
+            <ZoomEffect duration={(i + 1) * 1000}>
+              <BlogCard blogdata={blog} />
+            </ZoomEffect>
           </Grid>
         ))}
       </Grid>

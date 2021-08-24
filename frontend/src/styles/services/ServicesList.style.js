@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) =>
     root: {
       height: 'auto',
       background: '#3C065E',
-      marginTop: -20,
+      marginTop: 0,
       paddingTop: 20,
       paddingBottom: 110,
       color: '#f7bcf4',

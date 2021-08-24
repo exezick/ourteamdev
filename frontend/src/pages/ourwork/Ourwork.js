@@ -1,12 +1,15 @@
 import React from 'react'
 import OurWorkBanner from '../../components/ourwork/OurWorkBanner'
 import OurWorkContent from '../../components/ourwork/OurWorkContent'
+import FadeInFuntion from '../../animation/FadeIn'
 
 function OurWork() {
   return (
     <div>
-      <OurWorkBanner />
-      <OurWorkContent />
+      <FadeInFuntion duration={500}>
+        <OurWorkBanner />
+        <OurWorkContent />
+      </FadeInFuntion>
     </div>
   )
 }

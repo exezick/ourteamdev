@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       paddingTop: '30px',
-      height: '37vh',
+      height: 'auto !important',
       [theme.breakpoints.down('sm')]: {
         height: 'auto',
         paddingTop: '40px',
@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) =>
       borderBottom: '10px solid #B918AB',
       width: '100px',
       height: '1px',
-      marginTop: '55px',
       marginLeft: '20px',
       float: 'left',
       [theme.breakpoints.down('sm')]: {

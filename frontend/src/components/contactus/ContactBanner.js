@@ -2,6 +2,8 @@ import React from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import useStyles from '../../styles/BannerTitle'
 import contactIMG from '../../assets/img/contactus/contactbg.jpg'
+import FadeInFuntion from '../../animation/FadeIn'
+import BannerBorderEffect from '../../animation/BannerBorderEffect'
 
 const useStylesService = makeStyles((theme) =>
   createStyles({
@@ -25,13 +27,17 @@ function ContactBanner() {
   const classesService = useStylesService()
 
   return (
-    <div className={`${classes.root} ${classesService.root}`} align="center">
-      <div className={`${classes.titlemain} ${classesService.titlemain}`}>
-        <h1 className={classes.titleText}>CONTACT US</h1>
-        <div className={classes.titleBar}></div>
-        <div className={classes.continue}></div>
+    <FadeInFuntion duration={1000}>
+      <div className={`${classes.root} ${classesService.root}`} align="center">
+        <div className={`${classes.titlemain} ${classesService.titlemain}`}>
+          <h1 className={classes.titleText}>CONTACT US</h1>
+          <BannerBorderEffect>
+            <div className={classes.titleBar}></div>
+          </BannerBorderEffect>
+          <div className={classes.continue}></div>
+        </div>
       </div>
-    </div>
+    </FadeInFuntion>
   )
 }
 

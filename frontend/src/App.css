@@ -45,6 +45,19 @@ body{
   left: 0;
 }
 
+.risingEffect{
+  will-change: transform;
+  transition: transform 500ms;
+  -webkit-transition: ease 0.8s;
+  transition: ease 0.8s;
+}
+
+.risingEffect:hover{
+  transition: transform 500ms;
+  transform: translateY(-15px);
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 

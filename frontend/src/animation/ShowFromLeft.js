@@ -3,7 +3,7 @@ import { animated, useSpring } from 'react-spring'
 
 const ShowFromLeft = ({ children, duration }) => {
   const props = useSpring({
-    from: { x: -100 },
+    from: { x: -150 },
     config: { duration: duration },
     loop: {
       x: 0,

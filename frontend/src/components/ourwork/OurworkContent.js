@@ -8,6 +8,7 @@ import WorkCard from './WorkCard'
 import PortfolioData from '../../data/Portfolio.list'
 import Pagination from '@material-ui/lab/Pagination'
 import ZoomEffect from '../../animation/ZoomEffect'
+import SlideToTop from '../../animation/SlideToTop'
 
 function OurWorkContent() {
   const classes = useStyles()
@@ -37,9 +38,11 @@ function OurWorkContent() {
 
         {PortfolioData.map((portfolio, i) => (
           <Grid key={portfolio.id} item xs={12} md={6} lg={6}>
-            <ZoomEffect duration={(i + 1) * 1000}>
-              <WorkCard portfolio={portfolio} />
-            </ZoomEffect>
+            <SlideToTop duration={(i + 1) * 800}>
+              <ZoomEffect duration={(i + 1) * 1000}>
+                <WorkCard portfolio={portfolio} />
+              </ZoomEffect>
+            </SlideToTop>
           </Grid>
         ))}
       </Grid>

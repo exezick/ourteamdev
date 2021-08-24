@@ -97,6 +97,13 @@ const useStyles = makeStyles((theme) =>
         fontSize: 14,
       },
     },
+    textLimit: {
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      display: '-webkit-box',
+      lineClamp: 4,
+      boxOrient: 'vertical',
+    },
   }),
 )
 

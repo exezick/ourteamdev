@@ -6,7 +6,7 @@ import FadeInFuntion from '../../animation/FadeIn'
 function OurWork() {
   return (
     <div>
-      <FadeInFuntion duration={500}>
+      <FadeInFuntion duration={1000}>
         <OurWorkBanner />
         <OurWorkContent />
       </FadeInFuntion>

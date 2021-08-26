@@ -1,9 +1,9 @@
 import React from 'react'
 import { animated, useSpring } from 'react-spring'
 
-const SlideToTop = ({ children, duration }) => {
+const SlideToTop = ({ children, margin, duration }) => {
   const props = useSpring({
-    from: { marginTop: 80 },
+    from: { marginTop: margin },
     to: { marginTop: 0 },
     config: { duration: duration },
   })

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
     menu: {
       background: 'menu',
       padding: '0px !important',
-      marginBottom: 30,
+      marginBottom: 0,
     },
     pagination: {
       alignItems: 'center',

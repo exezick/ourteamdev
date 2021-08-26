@@ -4,7 +4,7 @@ import contactIMG from '../../assets/img/contactus/contactus-bg.jpg'
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
-      paddingTop: '20px',
+      paddingTop: '0px',
       height: '92vh',
       overflowY: 'hidden',
       background: '#3C065E',
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) =>
       width: '400px',
       position: 'relative',
       zIndex: 5,
+      marginTop: 20,
       [theme.breakpoints.down('sm')]: {
         width: 'auto',
         textAlign: 'center',
@@ -75,9 +76,9 @@ const useStyles = makeStyles((theme) =>
     },
     rightGrid: {
       height: '95vh',
-      paddingTop: 200,
+      paddingTop: 210,
       position: 'relative',
-      marginTop: -180,
+      marginTop: -200,
       color: '#fff',
       zIndex: 1,
       background: `radial-gradient(rgba(60, 6, 94,0.4), rgba(46, 5, 72,1)), url(${contactIMG})`,
@@ -94,7 +95,7 @@ const useStyles = makeStyles((theme) =>
     },
     rightGrid2: {
       height: '80vh',
-      paddingTop: 130,
+      paddingTop: 110,
       position: 'relative',
       marginTop: 0,
       color: '#fff',

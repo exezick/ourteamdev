@@ -38,7 +38,7 @@ function OurWorkContent() {
 
         {PortfolioData.map((portfolio, i) => (
           <Grid key={portfolio.id} item xs={12} md={6} lg={6}>
-            <SlideToTop duration={(i + 1) * 800}>
+            <SlideToTop margin={100} duration={(i + 1) * 800}>
               <ZoomEffect duration={(i + 1) * 1000}>
                 <WorkCard portfolio={portfolio} />
               </ZoomEffect>

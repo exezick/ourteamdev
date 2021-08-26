@@ -9,6 +9,7 @@ import Avatar from '@material-ui/core/Avatar'
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
+import SlideToTop from '../../animation/SlideToTop'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -65,68 +66,74 @@ function ContactInfo() {
   return (
     <div>
       <List>
-        <ListItem className={classes.centered}>
-          <ListItemAvatar>
-            <Avatar className={classes.avatar}>
-              <EmailIcon className={classes.iconSize} />
-            </Avatar>
-          </ListItemAvatar>
-          <ListItemText
-            primary={
-              <Typography className={classes.contactTitle}>
-                ourteamdev@gmail.com
-              </Typography>
-            }
-            secondary={
-              <Typography className={classes.contactPosition}>
-                Email Address
-              </Typography>
-            }
-            className={classes.contactText}
-          />
-        </ListItem>
+        <SlideToTop margin={100} duration={1000}>
+          <ListItem className={classes.centered}>
+            <ListItemAvatar>
+              <Avatar className={classes.avatar}>
+                <EmailIcon className={classes.iconSize} />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText
+              primary={
+                <Typography className={classes.contactTitle}>
+                  ourteamdev@gmail.com
+                </Typography>
+              }
+              secondary={
+                <Typography className={classes.contactPosition}>
+                  Email Address
+                </Typography>
+              }
+              className={classes.contactText}
+            />
+          </ListItem>
+        </SlideToTop>
 
-        <ListItem className={classes.centered}>
-          <ListItemAvatar>
-            <Avatar className={classes.avatar}>
-              <PhoneIcon className={classes.iconSize} />
-            </Avatar>
-          </ListItemAvatar>
-          <ListItemText
-            primary={
-              <Typography className={classes.contactTitle}>
-                09091234567
-              </Typography>
-            }
-            secondary={
-              <Typography className={classes.contactPosition}>
-                Contact Number
-              </Typography>
-            }
-            className={classes.contactText}
-          />
-        </ListItem>
+        <SlideToTop margin={100} duration={2000}>
+          <ListItem className={classes.centered}>
+            <ListItemAvatar>
+              <Avatar className={classes.avatar}>
+                <PhoneIcon className={classes.iconSize} />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText
+              primary={
+                <Typography className={classes.contactTitle}>
+                  09091234567
+                </Typography>
+              }
+              secondary={
+                <Typography className={classes.contactPosition}>
+                  Contact Number
+                </Typography>
+              }
+              className={classes.contactText}
+            />
+          </ListItem>
+        </SlideToTop>
 
-        <ListItem className={classes.centered}>
-          <ListItemAvatar>
-            <Avatar className={classes.avatar}>
-              <LocationOnIcon className={classes.iconSize} />
-            </Avatar>
-          </ListItemAvatar>
-          <ListItemText
-            primary={
-              <Typography className={classes.contactTitle}>
-                Legazpi, Albay
-              </Typography>
-            }
-            secondary={
-              <Typography className={classes.contactPosition}>
-                Address
-              </Typography>
-            }
-            className={classes.contactText}
-          />
-        </ListItem>
+        <SlideToTop margin={100} duration={3000}>
+          <ListItem className={classes.centered}>
+            <ListItemAvatar>
+              <Avatar className={classes.avatar}>
+                <LocationOnIcon className={classes.iconSize} />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText
+              primary={
+                <Typography className={classes.contactTitle}>
+                  Legazpi, Albay
+                </Typography>
+              }
+              secondary={
+                <Typography className={classes.contactPosition}>
+                  Address
+                </Typography>
+              }
+              className={classes.contactText}
+            />
+          </ListItem>
+        </SlideToTop>
       </List>
     </div>
   )

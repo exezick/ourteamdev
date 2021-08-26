@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) =>
       height: 'auto',
       background: '#FFF',
       marginTop: 0,
-      paddingTop: 50,
+      paddingTop: 30,
       paddingBottom: 70,
       paddingRight: 150,
       paddingLeft: 150,

@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import useStyles from '../../styles/home/OurTeam.style'
 import Grid from '@material-ui/core/Grid'
 import ourteamList from '../../data/OurTeam.list'
+import { Fade } from 'react-awesome-reveal'
 
 function Ourteam() {
   const classes = useStyles()
@@ -11,8 +12,12 @@ function Ourteam() {
     <div className={classes.root} align="center">
       <div className={classes.ourteamBG}>
         <div className={classes.titlemain} align="center">
-          <h1 className={classes.titleText}>OUR TEAM DEV</h1>
-          <div className={classes.titleBar}></div>
+          <Fade direction="left" cascade duration={1000} triggerOnce>
+            <h1 className={classes.titleText}>OUR TEAM DEV</h1>
+          </Fade>
+          <Fade delay={1000} cascade duration={1000} triggerOnce>
+            <div className={classes.titleBar}></div>
+          </Fade>
           <div className={classes.continue}></div>
         </div>
 

@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import ContactUsForm from '../../components/contactus/CotactUsForm'
 import ContactInfo from '../../components/contactus/ContactInfo'
 import useStyles from '../../styles/contactus/ContactUs.style'
+import { Fade } from 'react-awesome-reveal'
 
 function Contactus() {
   const classes = useStyles()
@@ -10,8 +11,12 @@ function Contactus() {
   return (
     <div className={classes.root} align="center">
       <div className={classes.titlemain}>
-        <h1 className={classes.titleText}>CONTACT US</h1>
-        <div className={classes.titleBar}></div>
+        <Fade direction="left" cascade duration={1000} triggerOnce>
+          <h1 className={classes.titleText}>CONTACT US</h1>
+        </Fade>
+        <Fade delay={1000} cascade duration={1000} triggerOnce>
+          <div className={classes.titleBar}></div>
+        </Fade>
         <div className={classes.continue}></div>
       </div>
 

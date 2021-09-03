@@ -9,8 +9,8 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Radio from '@material-ui/core/Radio'
 import useStyles from '../../styles/home/Services.style'
 import ServicesData from '../../data/Services.list'
-
 import useServiceHook from '../../hooks/useServiceHook'
+import { Fade } from 'react-awesome-reveal'
 
 function Services(props) {
   const classes = useStyles()
@@ -71,8 +71,12 @@ function Services(props) {
   return (
     <div className={classes.root} align="center">
       <div className={classes.titlemain} align="center">
-        <h1 className={classes.titleText}>SERVICES</h1>
-        <div className={classes.titleBar}></div>
+        <Fade direction="left" cascade duration={1000} triggerOnce>
+          <h1 className={classes.titleText}>SERVICES</h1>
+        </Fade>
+        <Fade delay={1000} cascade duration={1000} triggerOnce>
+          <div className={classes.titleBar}></div>
+        </Fade>
         <div className={classes.continue}></div>
       </div>
 

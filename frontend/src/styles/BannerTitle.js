@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) =>
       width: '100px',
       height: '1px',
       marginLeft: '20px',
+      marginTop: 55,
       float: 'left',
       [theme.breakpoints.down('sm')]: {
         display: 'none',

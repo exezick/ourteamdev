@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) =>
       borderRadius: '100%',
       width: 40,
       height: 40,
+      overflow: 'hidden',
       [theme.breakpoints.down('sm')]: {
         width: 35,
         height: 35,

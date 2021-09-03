@@ -7,8 +7,7 @@ import ServicesData from '../../data/Services.list'
 import isWidthUp from '@material-ui/core/withWidth'
 
 import FadeIn from '../../animation/FadeIn'
-import Zoom from 'react-reveal/Zoom'
-import Fade from 'react-reveal/Fade'
+import { Fade, Zoom } from 'react-awesome-reveal'
 
 function ServicesList(props) {
   const classes = useStyles()
@@ -16,7 +15,7 @@ function ServicesList(props) {
   return (
     <div className={classes.root}>
       {ServicesData.map((service, i) => (
-        <FadeIn key={service.id} duration={(i + 1) * 700}>
+        <FadeIn key={service.id} duration={(i + 1) * 700} triggerOnce>
           <Grid
             container
             spacing={0}
@@ -37,7 +36,7 @@ function ServicesList(props) {
               order={2}
               align="center"
             >
-              <Zoom duration={1000}>
+              <Zoom duration={1000} triggerOnce>
                 <img
                   src={service.servicesIMG}
                   className={`${classes.svgbanner}`}
@@ -48,7 +47,7 @@ function ServicesList(props) {
 
             <Grid item={true} xs={12} md={6} className={classes.rightGrid}>
               <div className={classes.details}>
-                <Fade top cascade duration={1000}>
+                <Fade direction="up" cascade duration={500} triggerOnce>
                   <Typography
                     variant="h3"
                     gutterBottom

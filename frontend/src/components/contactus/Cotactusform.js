@@ -9,6 +9,7 @@ import EmailIcon from '@material-ui/icons/Email'
 import LiveHelpIcon from '@material-ui/icons/LiveHelp'
 import Button from '@material-ui/core/Button'
 import SendIcon from '@material-ui/icons/Send'
+import { Fade } from 'react-awesome-reveal'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -55,117 +56,119 @@ function CotactUsform() {
   return (
     <div align="center">
       <FormControl className={classes.margin}>
-        <Grid container spacing={0} className={classes.centered}>
-          <Grid item xs={10}>
-            <TextField
-              id="name"
-              name="name"
-              label="Full Name"
-              placeholder="Enter your full name"
-              margin="normal"
-              required
-              fullWidth
-              variant="outlined"
-              className="cotactInput"
-              InputProps={{
-                className: classes.textfieldFont,
-                endAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                ),
-              }}
-              InputLabelProps={{
-                className: classes.textfieldLabel,
-              }}
-            />
-          </Grid>
+        <Fade duration={2000} triggerOnce>
+          <Grid container spacing={0} className={classes.centered}>
+            <Grid item xs={10}>
+              <TextField
+                id="name"
+                name="name"
+                label="Full Name"
+                placeholder="Enter your full name"
+                margin="normal"
+                required
+                fullWidth
+                variant="outlined"
+                className="cotactInput"
+                InputProps={{
+                  className: classes.textfieldFont,
+                  endAdornment: (
+                    <InputAdornment position="start">
+                      <AccountCircle />
+                    </InputAdornment>
+                  ),
+                }}
+                InputLabelProps={{
+                  className: classes.textfieldLabel,
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={10}>
-            <TextField
-              id="email"
-              name="email"
-              label="Email"
-              placeholder="Enter your email"
-              margin="normal"
-              required
-              fullWidth
-              variant="outlined"
-              className="cotactInput"
-              InputProps={{
-                className: classes.textfieldFont,
-                endAdornment: (
-                  <InputAdornment position="start">
-                    <EmailIcon />
-                  </InputAdornment>
-                ),
-              }}
-              InputLabelProps={{
-                className: classes.textfieldLabel,
-              }}
-            />
-          </Grid>
+            <Grid item xs={10}>
+              <TextField
+                id="email"
+                name="email"
+                label="Email"
+                placeholder="Enter your email"
+                margin="normal"
+                required
+                fullWidth
+                variant="outlined"
+                className="cotactInput"
+                InputProps={{
+                  className: classes.textfieldFont,
+                  endAdornment: (
+                    <InputAdornment position="start">
+                      <EmailIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                InputLabelProps={{
+                  className: classes.textfieldLabel,
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={10}>
-            <TextField
-              id="subject"
-              name="subject"
-              label="Subject"
-              placeholder="Enter subject"
-              margin="normal"
-              required
-              fullWidth
-              variant="outlined"
-              className="cotactInput"
-              InputProps={{
-                className: classes.textfieldFont,
-                endAdornment: (
-                  <InputAdornment position="start">
-                    <LiveHelpIcon />
-                  </InputAdornment>
-                ),
-              }}
-              InputLabelProps={{
-                className: classes.textfieldLabel,
-              }}
-            />
-          </Grid>
+            <Grid item xs={10}>
+              <TextField
+                id="subject"
+                name="subject"
+                label="Subject"
+                placeholder="Enter subject"
+                margin="normal"
+                required
+                fullWidth
+                variant="outlined"
+                className="cotactInput"
+                InputProps={{
+                  className: classes.textfieldFont,
+                  endAdornment: (
+                    <InputAdornment position="start">
+                      <LiveHelpIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                InputLabelProps={{
+                  className: classes.textfieldLabel,
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={10}>
-            <TextField
-              id="message"
-              name="message"
-              label="Message"
-              placeholder="Enter message"
-              margin="normal"
-              required
-              fullWidth
-              variant="outlined"
-              className="cotactInput"
-              multiline
-              rows={3}
-              InputProps={{
-                className: classes.textfieldFont,
-              }}
-              InputLabelProps={{
-                className: classes.textfieldLabel,
-              }}
-            />
-          </Grid>
+            <Grid item xs={10}>
+              <TextField
+                id="message"
+                name="message"
+                label="Message"
+                placeholder="Enter message"
+                margin="normal"
+                required
+                fullWidth
+                variant="outlined"
+                className="cotactInput"
+                multiline
+                rows={3}
+                InputProps={{
+                  className: classes.textfieldFont,
+                }}
+                InputLabelProps={{
+                  className: classes.textfieldLabel,
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={10}>
-            <Button
-              variant="contained"
-              size="large"
-              fullWidth
-              className={`${classes.buttonsend} buttonsend`}
-              endIcon={<SendIcon />}
-              disableElevation
-            >
-              Send
-            </Button>
+            <Grid item xs={10}>
+              <Button
+                variant="contained"
+                size="large"
+                fullWidth
+                className={`${classes.buttonsend} buttonsend`}
+                endIcon={<SendIcon />}
+                disableElevation
+              >
+                Send
+              </Button>
+            </Grid>
           </Grid>
-        </Grid>
+        </Fade>
       </FormControl>
     </div>
   )

@@ -7,7 +7,7 @@ import Tab from '@material-ui/core/Tab'
 import WorkCard from './WorkCard'
 import PortfolioData from '../../data/Portfolio.list'
 import Pagination from '@material-ui/lab/Pagination'
-import Fade from 'react-reveal/Fade'
+import { Fade } from 'react-awesome-reveal'
 
 function OurWorkContent() {
   const classes = useStyles()
@@ -21,7 +21,7 @@ function OurWorkContent() {
     <div className={classes.root} align="center">
       <Grid container spacing={4}>
         <Grid item={true} xs={12} md={12} lg={12}>
-          <Fade top duration={1000}>
+          <Fade direction="down" delay={200} duration={1000} triggerOnce>
             <Paper className={`${classes.paper} ${classes.menu}`} elevation={1}>
               <Tabs
                 value={value}
@@ -29,7 +29,13 @@ function OurWorkContent() {
                 textColor="secondary"
                 centered
               >
-                <Fade top cascade duration={1000}>
+                <Fade
+                  direction="down"
+                  delay={300}
+                  cascade
+                  duration={1000}
+                  triggerOnce
+                >
                   <Tab className={classes.tabs} label="All" />
                   <Tab className={classes.tabs} label="Websites" />
                   <Tab className={classes.tabs} label="Mobile Apps" />
@@ -41,14 +47,14 @@ function OurWorkContent() {
 
         {PortfolioData.map((portfolio, i) => (
           <Grid key={portfolio.id} item xs={12} md={6} lg={6}>
-            <Fade left duration={1800}>
+            <Fade direction="left" duration={1800} cascade triggerOnce>
               <WorkCard portfolio={portfolio} />
             </Fade>
           </Grid>
         ))}
       </Grid>
 
-      <Fade bottom duration={2000}>
+      <Fade direction="up" duration={2000} triggerOnce>
         <Pagination
           className={classes.pagination}
           count={5}

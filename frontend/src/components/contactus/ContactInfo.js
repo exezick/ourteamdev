@@ -9,7 +9,7 @@ import Avatar from '@material-ui/core/Avatar'
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
-import SlideToTop from '../../animation/SlideToTop'
+import { Bounce } from 'react-awesome-reveal'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -66,7 +66,7 @@ function ContactInfo() {
   return (
     <div>
       <List>
-        <SlideToTop margin={100} duration={1000}>
+        <Bounce cascade duration={1200} triggerOnce>
           <ListItem className={classes.centered}>
             <ListItemAvatar>
               <Avatar className={classes.avatar}>
@@ -87,9 +87,7 @@ function ContactInfo() {
               className={classes.contactText}
             />
           </ListItem>
-        </SlideToTop>
 
-        <SlideToTop margin={100} duration={2000}>
           <ListItem className={classes.centered}>
             <ListItemAvatar>
               <Avatar className={classes.avatar}>
@@ -110,9 +108,7 @@ function ContactInfo() {
               className={classes.contactText}
             />
           </ListItem>
-        </SlideToTop>
 
-        <SlideToTop margin={100} duration={3000}>
           <ListItem className={classes.centered}>
             <ListItemAvatar>
               <Avatar className={classes.avatar}>
@@ -133,7 +129,7 @@ function ContactInfo() {
               className={classes.contactText}
             />
           </ListItem>
-        </SlideToTop>
+        </Bounce>
       </List>
     </div>
   )

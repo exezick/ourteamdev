@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) =>
       paddingTop: '0px',
       height: '92vh',
       overflowY: 'hidden',
+      overflowX: 'hidden',
       background: '#3C065E',
       [theme.breakpoints.down('sm')]: {
         height: 'auto',

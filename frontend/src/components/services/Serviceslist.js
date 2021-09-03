@@ -8,7 +8,9 @@ import isWidthUp from '@material-ui/core/withWidth'
 
 import FadeIn from '../../animation/FadeIn'
 import ShowFromLeft from '../../animation/ShowFromLeft'
-import ZoomEffect from '../../animation/ZoomEffect'
+
+import Zoom from 'react-reveal/Zoom'
+import Fade from 'react-reveal/Fade'
 
 function ServicesList(props) {
   const classes = useStyles()
@@ -37,18 +39,18 @@ function ServicesList(props) {
               order={2}
               align="center"
             >
-              <ZoomEffect duration={(i + 1) * 1000}>
+              <Zoom duration={1000}>
                 <img
                   src={service.servicesIMG}
                   className={`${classes.svgbanner}`}
                   alt={service.servicesIMG}
                 />
-              </ZoomEffect>
+              </Zoom>
             </Grid>
 
             <Grid item={true} xs={12} md={6} className={classes.rightGrid}>
               <div className={classes.details}>
-                <ShowFromLeft duration={(i + 1) * 500}>
+                <Fade top cascade duration={1000}>
                   <Typography
                     variant="h3"
                     gutterBottom
@@ -56,9 +58,7 @@ function ServicesList(props) {
                   >
                     {service.serviceName}
                   </Typography>
-                </ShowFromLeft>
 
-                <ShowFromLeft duration={(i + 2) * 500}>
                   <Typography
                     variant="subtitle1"
                     gutterBottom
@@ -66,9 +66,7 @@ function ServicesList(props) {
                   >
                     {service.description}
                   </Typography>
-                </ShowFromLeft>
 
-                <ShowFromLeft duration={(i + 3) * 500}>
                   <Button
                     variant="text"
                     disableElevation
@@ -76,7 +74,7 @@ function ServicesList(props) {
                   >
                     READ MORE
                   </Button>
-                </ShowFromLeft>
+                </Fade>
               </div>
             </Grid>
           </Grid>

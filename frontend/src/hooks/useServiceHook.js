@@ -10,7 +10,7 @@ export default function useServiceHook(serviceId) {
   const [service, setService] = useState(() => getService(serviceId))
 
   const selectServiceOnChange = useCallback(
-    function (event) {
+    function (event, id) {
       if (event.target.value)
         setService(getService(parseInt(event.target.value)))
     },

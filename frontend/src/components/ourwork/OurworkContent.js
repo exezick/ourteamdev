@@ -7,8 +7,7 @@ import Tab from '@material-ui/core/Tab'
 import WorkCard from './WorkCard'
 import PortfolioData from '../../data/Portfolio.list'
 import Pagination from '@material-ui/lab/Pagination'
-import ZoomEffect from '../../animation/ZoomEffect'
-import SlideToTop from '../../animation/SlideToTop'
+import Fade from 'react-reveal/Fade'
 
 function OurWorkContent() {
   const classes = useStyles()
@@ -22,37 +21,41 @@ function OurWorkContent() {
     <div className={classes.root} align="center">
       <Grid container spacing={4}>
         <Grid item={true} xs={12} md={12} lg={12}>
-          <Paper className={`${classes.paper} ${classes.menu}`} elevation={1}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              textColor="secondary"
-              centered
-            >
-              <Tab className={classes.tabs} label="All" />
-              <Tab className={classes.tabs} label="Websites" />
-              <Tab className={classes.tabs} label="Mobile Apps" />
-            </Tabs>
-          </Paper>
+          <Fade top duration={1000}>
+            <Paper className={`${classes.paper} ${classes.menu}`} elevation={1}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                textColor="secondary"
+                centered
+              >
+                <Fade top cascade duration={1000}>
+                  <Tab className={classes.tabs} label="All" />
+                  <Tab className={classes.tabs} label="Websites" />
+                  <Tab className={classes.tabs} label="Mobile Apps" />
+                </Fade>
+              </Tabs>
+            </Paper>
+          </Fade>
         </Grid>
 
         {PortfolioData.map((portfolio, i) => (
           <Grid key={portfolio.id} item xs={12} md={6} lg={6}>
-            <SlideToTop margin={100} duration={(i + 1) * 800}>
-              <ZoomEffect duration={(i + 1) * 1000}>
-                <WorkCard portfolio={portfolio} />
-              </ZoomEffect>
-            </SlideToTop>
+            <Fade left duration={1800}>
+              <WorkCard portfolio={portfolio} />
+            </Fade>
           </Grid>
         ))}
       </Grid>
 
-      <Pagination
-        className={classes.pagination}
-        count={5}
-        variant="outlined"
-        color="secondary"
-      />
+      <Fade bottom duration={2000}>
+        <Pagination
+          className={classes.pagination}
+          count={5}
+          variant="outlined"
+          color="secondary"
+        />
+      </Fade>
     </div>
   )
 }

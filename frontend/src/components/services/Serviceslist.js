@@ -7,8 +7,6 @@ import ServicesData from '../../data/Services.list'
 import isWidthUp from '@material-ui/core/withWidth'
 
 import FadeIn from '../../animation/FadeIn'
-import ShowFromLeft from '../../animation/ShowFromLeft'
-
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
 

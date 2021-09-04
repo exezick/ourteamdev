@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import ContactUsForm from '../../components/contactus/CotactUsForm'
+import ContactUsForm from '../../components/contactus/ContactUsForm'
 import ContactInfo from '../../components/contactus/ContactInfo'
 import useStyles from '../../styles/contactus/ContactUs.style'
 import { Fade } from 'react-awesome-reveal'

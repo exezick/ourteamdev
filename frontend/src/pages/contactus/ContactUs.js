@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactUsForm from '../../components/contactus/CotactUsForm'
+import ContactUsForm from '../../components/contactus/ContactUsForm'
 import ContactInfo from '../../components/contactus/ContactInfo'
 import Grid from '@material-ui/core/Grid'
 import useStyles from '../../styles/contactus/ContactUs.style'

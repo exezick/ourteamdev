@@ -9,15 +9,13 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Radio from '@material-ui/core/Radio'
 import useStyles from '../../styles/home/Services.style'
 import ServicesData from '../../data/Services.list'
-import useServiceHook from '../../hooks/useServiceHook'
+import useServiceHook from '../../hooks/services/useServiceHook'
 import { Fade } from 'react-awesome-reveal'
 
 function Services(props) {
   const classes = useStyles()
 
-  // By default we'll set it as the first service
-  const [service, selectServiceOnChange, selectServiceOnClick] =
-    useServiceHook(1)
+  const [service, , selectServiceOnChange, selectServiceOnClick] = useServiceHook();
 
   const serviceList = useMemo(
     () => (

@@ -6,8 +6,8 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import WorkCard from './WorkCard'
 import PortfolioData from '../../data/Portfolio.list'
-import Pagination from '@material-ui/lab/Pagination'
 import { Fade } from 'react-awesome-reveal'
+import Button from '@material-ui/core/Button'
 
 function OurWorkContent() {
   const classes = useStyles()
@@ -55,12 +55,13 @@ function OurWorkContent() {
       </Grid>
 
       <Fade direction="up" duration={2000} triggerOnce>
-        <Pagination
-          className={classes.pagination}
-          count={5}
-          variant="outlined"
-          color="secondary"
-        />
+        <Button
+          variant="text"
+          disableElevation
+          className={`${classes.btnloadmore} btnhire`}
+        >
+          LOAD MORE
+        </Button>
       </Fade>
     </div>
   )

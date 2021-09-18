@@ -3,7 +3,7 @@ import useStyles from '../../styles/blog/BlogContent.style'
 import Grid from '@material-ui/core/Grid'
 import BlogCard from './BlogCard'
 import BlogData from '../../data/Blog.list'
-import Pagination from '@material-ui/lab/Pagination'
+import Button from '@material-ui/core/Button'
 
 import { Fade, Zoom } from 'react-awesome-reveal'
 
@@ -25,12 +25,13 @@ function BlogContent() {
       </Grid>
 
       <Fade direction="up" duration={2000} triggerOnce>
-        <Pagination
-          className={classes.pagination}
-          count={5}
-          variant="outlined"
-          color="secondary"
-        />
+        <Button
+          variant="text"
+          disableElevation
+          className={`${classes.btnloadmore} btnhire`}
+        >
+          LOAD MORE
+        </Button>
       </Fade>
     </div>
   )

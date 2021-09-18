@@ -27,11 +27,22 @@ const useStyles = makeStyles((theme) =>
       padding: '0px !important',
       marginBottom: 30,
     },
-    pagination: {
-      alignItems: 'center',
-      textAlign: 'center',
-      marginTop: 60,
-      width: 270,
+    btnloadmore: {
+      width: 160,
+      paddingLeft: 10,
+      borderRadius: 0,
+      fontSize: 17,
+      paddingTop: 7,
+      paddingBottom: 7,
+      background: '#B918AB',
+      border: 0,
+      color: 'white',
+      marginLeft: 'auto',
+      marginTop: 70,
+      marginBottom: 10,
+      [theme.breakpoints.down('sm')]: {
+        fontSize: 15,
+      },
     },
     tabs: {
       [theme.breakpoints.down('sm')]: {

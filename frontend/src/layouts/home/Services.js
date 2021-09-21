@@ -169,7 +169,7 @@ function Services(props) {
         <div className={classes.skewBG}>
           <img
             src={service.servicesBgIMG}
-            className={`${classes.skewIMG} ${service.fadein}`}
+            className={classes.skewIMG}
             alt="skewIMG"
           />
         </div>

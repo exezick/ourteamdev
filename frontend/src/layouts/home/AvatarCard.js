@@ -7,13 +7,14 @@ function AvatarCard({ avatar }) {
 
   return (
     <div>
-      <Rotate delay={1000} duration={2000}>
-        <Zoom delay={1000} duration={2000}>
+      <Rotate delay={1000} duration={2000} triggerOnce>
+        <Zoom delay={1000} duration={2000} triggerOnce>
           <div className={classes.avatarCircMain}>
             <Fade
               delay={1000}
               duration={1500}
               className={classes.avatarIMGzIndex}
+              triggerOnce
             >
               <img
                 src={avatar.avatarIMG}
@@ -23,14 +24,24 @@ function AvatarCard({ avatar }) {
               />
             </Fade>
 
-            <Rotate direction="top-left" delay={2500} duration={2000}>
+            <Rotate
+              direction="top-left"
+              delay={2500}
+              duration={2000}
+              triggerOnce
+            >
               <div
                 className={classes.avatarShapesLeft}
                 style={{ background: `${avatar.avatarColor}` }}
               ></div>
             </Rotate>
 
-            <Rotate direction="bottom-right" delay={2500} duration={2000}>
+            <Rotate
+              direction="bottom-right"
+              delay={2500}
+              duration={2000}
+              triggerOnce
+            >
               <div
                 className={classes.avatarShapesRight}
                 style={{ background: `${avatar.avatarColor}` }}
@@ -41,6 +52,7 @@ function AvatarCard({ avatar }) {
               duration={1000}
               delay={1300}
               className={classes.dotIndex}
+              triggerOnce
             >
               <div
                 className={classes.avatarSmallCircL}
@@ -56,7 +68,7 @@ function AvatarCard({ avatar }) {
       </Rotate>
 
       <div className={classes.avatarText}>
-        <Fade cascade delay={2100} duration={1800}>
+        <Fade cascade delay={2100} duration={1800} triggerOnce>
           <div className={classes.avatarName}>{avatar.avatarName}</div>
           <div className={classes.avatarPosition}>{avatar.avatarPosition}</div>
         </Fade>

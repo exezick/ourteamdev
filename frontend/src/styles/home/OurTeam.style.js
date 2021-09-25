@@ -179,6 +179,14 @@ const useStyles = makeStyles((theme) =>
       fontSize: 14,
       marginTop: 5,
     },
+    dotIndex: {
+      zIndex: 20,
+      position: 'relative',
+    },
+    avatarIMGzIndex: {
+      zIndex: 10,
+      position: 'relative',
+    },
   }),
 )
 

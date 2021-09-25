@@ -174,7 +174,7 @@ function Services(props) {
           />
         </div>
       </Fade>
-      <Fade cascade duration={2000} delay={2500} triggerOnce>
+      <Fade duration={2000} delay={2500} triggerOnce>
         <div className={classes.circularbg}></div>
         <div className={classes.circularbg2}></div>
       </Fade>

@@ -4,6 +4,7 @@ import useStyles from '../../styles/home/OurTeam.style'
 import Grid from '@material-ui/core/Grid'
 import ourteamList from '../../data/OurTeam.list'
 import { Fade } from 'react-awesome-reveal'
+import AvatarCard from './AvatarCard'
 
 function Ourteam() {
   const classes = useStyles()
@@ -21,14 +22,16 @@ function Ourteam() {
           <div className={classes.continue}></div>
         </div>
 
-        <Typography
-          variant="subtitle1"
-          gutterBottom
-          className={classes.subtitle}
-        >
-          This are our entire developer team with incredible freelance talent
-          for all your software development needs.
-        </Typography>
+        <Fade delay={800} duration={2000} triggerOnce>
+          <Typography
+            variant="subtitle1"
+            gutterBottom
+            className={classes.subtitle}
+          >
+            This are our entire developer team with incredible freelance talent
+            for all your software development needs.
+          </Typography>
+        </Fade>
 
         <Grid container spacing={0} className={classes.avatarWrap}>
           {ourteamList.map((avatar) => (
@@ -41,39 +44,7 @@ function Ourteam() {
               className={classes.avatarGrid}
               key={avatar.id}
             >
-              <div className={classes.avatarCircMain}>
-                <img
-                  src={avatar.avatarIMG}
-                  alt={avatar.id}
-                  className={classes.avatarIMG}
-                  style={{ border: `3px solid ${avatar.avatarColor}` }}
-                />
-
-                <div
-                  className={classes.avatarShapesLeft}
-                  style={{ background: `${avatar.avatarColor}` }}
-                ></div>
-                <div
-                  className={classes.avatarShapesRight}
-                  style={{ background: `${avatar.avatarColor}` }}
-                ></div>
-
-                <div
-                  className={classes.avatarSmallCircL}
-                  style={{ background: `${avatar.avatarColor}` }}
-                ></div>
-                <div
-                  className={classes.avatarSmallCircR}
-                  style={{ background: `${avatar.avatarColor}` }}
-                ></div>
-              </div>
-
-              <div className={classes.avatarText}>
-                <div className={classes.avatarName}>{avatar.avatarName}</div>
-                <div className={classes.avatarPosition}>
-                  {avatar.avatarPosition}
-                </div>
-              </div>
+              <AvatarCard avatar={avatar} />
             </Grid>
           ))}
         </Grid>

@@ -4,9 +4,9 @@ import { getService } from '../../core/helpers/service.helper';
 
 export default function useServiceAutoSelectHook(setService) {
     useEffect(() => {
-        const interval = setInterval(() => {
+        const autoSelectService = setInterval(() => {
             setService((prevServiceId) => getService(parseInt(prevServiceId.id) + 1))
-        }, 5000);
-        return () => clearInterval(interval);
+        }, 10000);
+        return () => clearInterval(autoSelectService);
     }, [setService]);
 }

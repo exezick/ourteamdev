@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 
 import { getService } from '../../core/helpers/service.helper';
 
-export default function useServiceHookOnClick(setService) {
+export default function useSelectServiceHook(setService) {
 
   const selectServiceOnChange = useCallback(event => {
       if (event.target.value)

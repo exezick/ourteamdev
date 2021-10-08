@@ -2,9 +2,10 @@ import React from 'react'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import HomeBannerSVG from '../../assets/svg/home-banner.svg'
 import useStyles from '../../styles/home/Banner.style'
 import '../../styles/banner.css'
+import BannerSVG from '../../assets/BannerSVG'
+import { Fade } from 'react-awesome-reveal'
 
 function Banner() {
   const classes = useStyles()
@@ -37,11 +38,9 @@ function Banner() {
               HIRE US
             </Button>
           </div>
-          <img
-            src={HomeBannerSVG}
-            className={classes.svgbanner}
-            alt={HomeBannerSVG}
-          />
+          <Fade duration={2000} triggerOnce>
+            <BannerSVG />
+          </Fade>
         </div>
       </Card>
       <div className={classes.circularbg}></div>

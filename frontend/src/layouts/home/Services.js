@@ -10,12 +10,13 @@ import Radio from '@material-ui/core/Radio'
 import useStyles from '../../styles/home/Services.style'
 import ServicesData from '../../data/Services.list'
 import useServiceHook from '../../hooks/services/useServiceHook'
-import { Fade } from 'react-awesome-reveal'
+import { Fade, Zoom } from 'react-awesome-reveal'
 
 function Services(props) {
   const classes = useStyles()
 
-  const [service, , selectServiceOnChange, selectServiceOnClick] = useServiceHook();
+  const [service, , selectServiceOnChange, selectServiceOnClick] =
+    useServiceHook()
 
   const serviceList = useMemo(
     () => (
@@ -27,20 +28,22 @@ function Services(props) {
             button
             onClick={() => selectServiceOnClick(s.id)}
           >
-            <ListItemText
-              id={s.id}
-              primary={s.serviceName}
-              className={classes.menuText}
-            />
-            <ListItemSecondaryAction>
-              <Radio
-                checked={service.id === s.id}
-                value={s.id}
-                name={s.serviceName}
-                className={classes.radiobtn}
-                onChange={selectServiceOnChange}
+            <Fade delay={1000} duration={2000} cascade triggerOnce>
+              <ListItemText
+                id={s.id}
+                primary={s.serviceName}
+                className={classes.menuText}
               />
-            </ListItemSecondaryAction>
+              <ListItemSecondaryAction>
+                <Radio
+                  checked={service.id === s.id}
+                  value={s.id}
+                  name={s.serviceName}
+                  className={classes.radiobtn}
+                  onChange={selectServiceOnChange}
+                />
+              </ListItemSecondaryAction>
+            </Fade>
           </ListItem>
         ))}
       </>
@@ -78,70 +81,103 @@ function Services(props) {
         <div className={classes.continue}></div>
       </div>
 
-      <div className={classes.RightMenuMobile} align="center">
-        {serviceListMobile}
-      </div>
+      <Fade duration={1500} triggerOnce>
+        <div className={classes.RightMenuMobile} align="center">
+          {serviceListMobile}
+        </div>
+      </Fade>
 
-      <Grid container spacing={0} className={classes.zindex}>
-        <Grid item xs={12} className={classes.mobileSVGImage}>
-          <img
-            src={service.servicesIMG}
-            className={classes.servicesSVGmobile}
-            alt={service.servicesIMG}
-          />
-        </Grid>
-
-        <Grid item xs={12} md={5} lg={5}>
-          <div className={classes.details}>
-            <Typography variant="h3" gutterBottom className={classes.title}>
-              <div className={classes.textTitle}>{service.serviceName}</div>
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              gutterBottom
-              className={`${classes.subtitle} ${classes.textLimit}`}
-            >
-              {service.description}
-            </Typography>
-            <Button
-              variant="text"
-              disableElevation
-              className={`${classes.btnshire} btnhire`}
-            >
-              READ MORE
-            </Button>
-          </div>
-        </Grid>
-
-        <Grid
-          item
-          xs={7}
-          className={`${classes.noOverflow} ${classes.menuRightWrap}`}
-        >
-          <div className={classes.skewed}>
-            <div className={classes.skewedSVG}>
+      <Fade
+        direction="right"
+        delay={1000}
+        duration={1000}
+        className={classes.zindex}
+        triggerOnce
+      >
+        <Grid container spacing={0} className={classes.zindex}>
+          <Grid item xs={12} className={classes.mobileSVGImage}>
+            <Zoom delay={1000} duration={1300} triggerOnce>
               <img
                 src={service.servicesIMG}
-                className={classes.servicesSVG}
+                className={classes.servicesSVGmobile}
                 alt={service.servicesIMG}
               />
-            </div>
-            <div className={classes.skewedContent}>
-              <List className={classes.menuRight}>{serviceList}</List>
-            </div>
-          </div>
-        </Grid>
-      </Grid>
-      <div className={classes.skewBG}>
-        <img
-          src={service.servicesBgIMG}
-          className={classes.skewIMG}
-          alt="skewIMG"
-        />
-      </div>
+            </Zoom>
+          </Grid>
 
-      <div className={classes.circularbg}></div>
-      <div className={classes.circularbg2}></div>
+          <Grid item xs={12} md={5} lg={5}>
+            <Fade delay={1500} duration={1000} triggerOnce>
+              <div className={classes.details}>
+                <Fade delay={2000} cascade duration={1000} triggerOnce>
+                  <Typography
+                    variant="h3"
+                    gutterBottom
+                    className={classes.title}
+                  >
+                    <div className={classes.textTitle}>
+                      {service.serviceName}
+                    </div>
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    className={`${classes.subtitle} ${classes.textLimit}`}
+                  >
+                    {service.description}
+                  </Typography>
+                  <Button
+                    variant="text"
+                    disableElevation
+                    className={`${classes.btnshire} btnhire`}
+                  >
+                    READ MORE
+                  </Button>
+                </Fade>
+              </div>
+            </Fade>
+          </Grid>
+
+          <Grid
+            item
+            xs={7}
+            className={`${classes.noOverflow} ${classes.menuRightWrap}`}
+          >
+            <div className={classes.skewed}>
+              <Fade delay={1200} duration={1000} cascade triggerOnce>
+                <Fade direction="left" delay={1200} duration={1300} triggerOnce>
+                  <div className={classes.skewedSVG}>
+                    <Zoom delay={1600} duration={2000} triggerOnce>
+                      <img
+                        src={service.servicesIMG}
+                        className={classes.servicesSVG}
+                        alt={service.servicesIMG}
+                      />
+                    </Zoom>
+                  </div>
+                </Fade>
+
+                <div className={classes.skewedContent}>
+                  <List className={classes.menuRight}>{serviceList}</List>
+                </div>
+              </Fade>
+            </div>
+          </Grid>
+        </Grid>
+      </Fade>
+
+      <Fade direction="right" delay={1300} duration={1000} triggerOnce>
+        <div className={classes.skewBG}>
+          <img
+            src={service.servicesBgIMG}
+            className={classes.skewIMG}
+            alt="skewIMG"
+          />
+        </div>
+      </Fade>
+      <Fade cascade duration={2000} delay={2500} triggerOnce>
+        <div className={classes.circularbg}></div>
+        <div className={classes.circularbg2}></div>
+      </Fade>
     </div>
   )
 }

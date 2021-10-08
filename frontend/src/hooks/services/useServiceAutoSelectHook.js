@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { getService } from '../../core/helpers/service.helper';
+import { getService } from '../../core/helpers/service.helper'
 
 export default function useServiceAutoSelectHook(setService) {
     useEffect(() => {

@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) =>
       flexGrow: 1,
       zIndex: 2,
       position: 'relative',
+      overflowY: 'hidden !important',
     },
     titlemain: {
       alignContent: 'center',
@@ -79,6 +80,7 @@ const useStyles = makeStyles((theme) =>
     },
     avatarWrap: {
       marginTop: '70px',
+      overflow: 'hidden !important',
       [theme.breakpoints.down('sm')]: {
         marginTop: 0,
       },
@@ -178,6 +180,14 @@ const useStyles = makeStyles((theme) =>
     avatarPosition: {
       fontSize: 14,
       marginTop: 5,
+    },
+    dotIndex: {
+      zIndex: 20,
+      position: 'relative',
+    },
+    avatarIMGzIndex: {
+      zIndex: 10,
+      position: 'relative',
     },
   }),
 )
